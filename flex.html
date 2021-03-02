@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta name="msapplication-TileColor" content="#006BAD">
+    <meta name="theme-color" content="#006BAD">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Flexboxes</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="index.html">Знакомство с Frontend</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="devtools.html">Devtools</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="html_base.html">HTML base</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="html_bl_in.html">Block/inline</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_base.html">CSS base</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="position.html">Position + z-index</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_selectors.html">CSS selectors</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="bem.html">БЭМ методология</a>
+              </li>
+              <li class="nav__item"><a class="nav__link active" href="flex.html">Flexboxes</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Адаптив(@media)/mobile first</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Bootstrap</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Gulp</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Pug</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SCSS</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SVG-спрайты</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Кроссбраузерность</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Fallback</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Grid</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">CSS-анимации</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SVG-анимации</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="main">
+        <div class="container">
+          <div class="box">
+            <h1 class="box__h1">Flexboxes</h1>
+            <h2 class="box__h2">#1 display: flex;</h2>
+            <p><span class="alert"><a href="https://wp-kama.ru/id_8045/flex-v-css.html" target="_blank">Отличная статья с визуальными примерами</a></span></p>
+            <p><span class="alert"><a href="http://flexboxfroggy.com/#ru">Игра для тренировки</a></span></p>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#2 Основные свойства для построения сетки</h2><img class="box__screen" src="./assets/imgs/flexbox-info.png">
+            <ul class="box__list">
+              <li>flex-wrap (к флекс-контейнеру/ перенос элементов)</li>
+              <li>align-items (к флекс-контейнеру/ горизонтальная/главная ось)</li>
+              <li>justify-content (к флекс-контейнеру/ вертикальная/побочная/поперечная ось)</li>
+              <li>(трюк с margin-left: auto)</li>
+              <li>align-self (к флекс-элементу/ горизонтальная/главная ось)</li>
+              <li>flex-direction (к флекс-контейнеру/ направление)</li>
+              <li>order (к флекс-элементу/ порядок)</li>
+            </ul>
+            <h3 class="box__h3">Контейнеру flex-direction: row; (по умолчанию)</h3>
+            <div class="test-box__flex-container" style="display:flex;">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">3 флекс элемент 25%</div>
+            </div>
+            <h3 class="box__h3">Контейнеру flex-direction: row; (по умолчанию) + элементу margin-left:auto;</h3>
+            <div class="test-box__flex-container" style="display:flex;">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3" style="margin-left:auto;">3 флекс элемент 25% margin-left:auto;</div>
+            </div>
+            <h3 class="box__h3">Контейнеру flex-direction: row-reverse;</h3>
+            <div class="test-box__flex-container" style="display:flex; flex-direction: row-reverse;">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">3 флекс элемент 25%</div>
+            </div>
+            <h3 class="box__h3">Контейнеру flex-direction: column;</h3>
+            <div class="test-box__flex-container" style="display:flex; flex-direction:column;">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">3 флекс элемент 25%</div>
+            </div>
+            <h3 class="box__h3">Контейнеру flex-direction: column-reverse;</h3>
+            <div class="test-box__flex-container" style="display:flex; flex-direction:column-reverse;">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">3 флекс элемент 25%</div>
+            </div>
+            <h3 class="box__h3">Контейнеру justify-content: flex-end;</h3>
+            <div class="test-box__flex-container" style="display:flex; justify-content: flex-end;">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">3 флекс элемент 25%</div>
+            </div>
+            <h3 class="box__h3">Контейнеру justify-content: center;</h3>
+            <div class="test-box__flex-container" style="display:flex; justify-content: center;">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">3 флекс элемент 25%</div>
+            </div>
+            <h3 class="box__h3">Контейнеру justify-content: space-between;</h3>
+            <div class="test-box__flex-container" style="display:flex; justify-content: space-between;">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">3 флекс элемент 25%</div>
+            </div>
+            <h3 class="box__h3">Контейнеру justify-content: space-around;</h3>
+            <div class="test-box__flex-container" style="display:flex; justify-content: space-around;">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">3 флекс элемент 25%</div>
+            </div>
+            <h3 class="box__h3">
+              Контейнеру: height: 50vh; /flex-direction: column; /
+              align-items: center; /
+              justify-content: space-between;
+            </h3>
+            <div class="test-box__flex-container" style="height: 50vh; display:flex; flex-direction: column; align-items: center; justify-content: space-between;">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">3 флекс элемент 25%</div>
+            </div>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#3 Принцип построения сетки</h2>
+            <div class="test-box__row">
+              <div class="test-box__flex-element test-box__flex-element--c1">1 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">2 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">3 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c1">4 флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c2">5 флекс элемент флекс элемент 25%</div>
+              <div class="test-box__flex-element test-box__flex-element--c3">6 флекс элемент 25%</div>
+            </div>
+            <div class="test-box__container" style="width: 1023px; margin: 0 auto;">
+              <div class="test-box__row" style="margin: 0 -10px; padding: 0;">
+                <div class="test-box__flex-element test-box__flex-element--c1" style="padding: 0 10px; border: 0;">
+                  <div>контент колонки контент колонки контент колонки контент колонки</div>
+                </div>
+                <div class="test-box__flex-element test-box__flex-element--c2" style="padding: 0 10px; border: 0;">
+                  <div>контент колонки контент колонки контент колонки</div>
+                </div>
+                <div class="test-box__flex-element test-box__flex-element--c3" style="padding: 0 10px; border: 0;">
+                  <div>контент колонки</div>
+                </div>
+                <div class="test-box__flex-element test-box__flex-element--c1" style="padding: 0 10px; border: 0;">
+                  <div>контент колонки контент колонки контент колонки контент колонки</div>
+                </div>
+                <div class="test-box__flex-element test-box__flex-element--c2" style="padding: 0 10px; border: 0;"><img src="./assets/imgs/cat.jpg" style="max-width: 100%;"></div>
+                <div class="test-box__flex-element test-box__flex-element--c3" style="padding: 0 10px; border: 0;">
+                  <div>контент колонки контент колонки контент колонки контент колонки</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container"></div>
+      </footer>
+    </div>
+    <!-- Модальные окна    -->
+    <div class="modal fade modal--auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="modal-auth" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-status modal-status--error">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-warning"></use>
+              </svg><span class="text">Произошла ошибка. Заполните форму еще раз</span>
+            </div>
+            <div class="modal-title">Авторизация</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal fieldgroup--mb-sm">
+              <label class="label">Пароль *</label>
+              <input class="input" type="text" placeholder="Введите пароль" required>
+            </div>
+            <div class="fieldgroup fieldgroup--remember">
+              <label class="checkbox-item">
+                <input type="checkbox" name="success" checked><span class="label">Запомнить меня</span>
+              </label><a href="javascript:;" data-target="#modal-forget" data-toggle="modal" data-dismiss="modal">Забыли пароль?</a>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Войти</button><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-register" data-toggle="modal" data-dismiss="modal">Зарегистрироваться</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--forget" id="modal-forget" tabindex="-1" role="dialog" aria-labelledby="modal-forget" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Восстановление пароля</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="modal-text">Введите Ваш e-mail и на него будет выслан пароль.</div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Восстановить пароль</button><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-auth" data-toggle="modal" data-dismiss="modal">Вернуться к авторизации</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--register" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Регистрация</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal has-error">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+              <div class="error-mess">это поле должно быть заполнено</div>
+            </div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Пароль *</label>
+              <input class="input" type="text" placeholder="Введите пароль" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal has-error">
+              <label class="label">Повторите пароль *</label>
+              <input class="input" type="text" placeholder="Повторите пароль" required>
+              <div class="error-mess">пароли не совпадают</div>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Зарегистрироваться</button>
+              <div class="modal-text">Нажимая на кнопку «Зарегистрироваться», я даю согласие на обработку персональных данных</div><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-auth" data-toggle="modal" data-dismiss="modal">Вернуться к авторизации</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--feedback" id="modal-feedback" tabindex="-1" role="dialog" aria-labelledby="modal-feedback" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Обратный звонок</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Ваше имя *</label>
+              <input class="input" type="text" placeholder="Введите имя" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Телефон *</label>
+              <input class="input" type="tel" placeholder="Введите телефон" required>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full" data-target="#modal-success" data-toggle="modal" data-dismiss="modal">Заказать звонок</button>
+              <!--button.btn.btn--primary.btn--full Заказать звонок-->
+              <div class="modal-text">Нажимая на кнопку «Заказать звонок», я даю согласие на обработку персональных данных</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--success" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="modal-success" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Спасибо!</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="modal-text">Мы свяжемся с вами в ближайшее время <br>График работы: пн-пт, 9:00 - 18:00</div>
+            <div class="fieldgroup"><a class="btn btn--bordered" href="javascript:;" data-dismiss="modal">Вернуться к покупкам</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/vendors.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

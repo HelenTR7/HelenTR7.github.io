@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta name="msapplication-TileColor" content="#006BAD">
+    <meta name="theme-color" content="#006BAD">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Знакомство с Frontend</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="index.html">Знакомство с Frontend</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="devtools.html">Devtools</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="html_base.html">HTML base</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="html_bl_in.html">Block/inline</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_base.html">CSS base</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="position.html">Position + z-index</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_selectors.html">CSS selectors</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="bem.html">БЭМ методология</a>
+              </li>
+              <li class="nav__item"><a class="nav__link active" href="flex.html">Flexboxes</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Адаптив(@media)/mobile first</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Bootstrap</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Gulp</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Pug</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SCSS</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SVG-спрайты</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Кроссбраузерность</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Fallback</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Grid</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">CSS-анимации</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SVG-анимации</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="main">
+        <div class="container">
+          <div class="box">
+            <h1 class="box__h1">Знакомство с Frontend</h1>
+            <h2 class="box__h2">#1 Погружение</h2>
+            <h3 class="box__h3">Что такое Web?</h3>
+            <dl class="box__term">
+              <dt>Frontend (browser)</dt>
+              <dd>HTML, CSS, JS, jQuery, ReactJS, Vue.js, Angular, Backbone, Polymer etc</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Backend (server)</dt>
+              <dd>PHP, Node.js, Java, RoR, .Net, C++, C#, Python etc</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>HTML (HyperText Markup Language — «язык гипертекстовой разметки»)</dt>
+              <dd>самый базовый строительный блок Веба. Он определяет содержание и структуру веб-контента.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>CSS (Cascading Style Sheets — «каскадные таблицы стилей»)</dt>
+              <dd>формальный язык описания внешнего вида веб-страницы, написанной с использованием языка разметки.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>JavaScript (язык программирования)</dt>
+              <dd>язык сценариев для придания интерактивности веб-страницам.</dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#2 Введение в HTML</h2>
+            <dl class="box__term">
+              <dt>Тег (HTML элемент)</dt>
+              <dd>это основная структурная единица веб-страницы, написанная на языке HTML.</dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#3 Базовая структура HTML</h2><img class="box__screen" src="./assets/imgs/base_html.jpg" alt="html">
+            <dl class="box__term">
+              <dt>&lt;!DOCTYPE html&gt;</dt>
+              <dd>Элемент предназначен для указания типа текущего документа — DTD (document type definition, описание типа документа).  Это необходимо, чтобы браузер понимал, как следует интерпретировать текущую веб-страницу, поскольку HTML существует в нескольких версиях, кроме того, имеется XHTML (EXtensible HyperText Markup Language, расширенный язык разметки гипертекста), похожий на HTML, но различающийся с ним по синтаксису. Чтобы браузер «не путался» и понимал, согласно какому стандарту отображать веб-страницу и необходимо в первой строке кода задавать &lt;!DOCTYPE&gt;.<br> Есть несколько вариантов DOCTYPE. Самый актуальный - в примере. Он появился в HTML5 , и является актуальным до сих пор.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>&lt;html&gt;</dt>
+              <dd>Открывающий тег &lt;html&gt; определяет начало HTML-документа, внутри него хранится «голова» (&lt;head&gt;) и «тело» документа (&lt;body&gt;).</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>&lt;head&gt;</dt>
+              <dd>Содержимое этого раздела не показывается напрямую на странице, за исключением элемента &lt;title&gt;. Внутри &lt;head&gt; могут располагаться следующие элементы: &lt;base&gt;, &lt;link&gt;, &lt;meta&gt;, &lt;script&gt;, &lt;style&gt; или &lt;title&gt;.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>&lt;body&gt;</dt>
+              <dd>Внутри body находится структура документа, все теги, а также может быть подключен JS.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>&lt;title&gt;</dt>
+              <dd>Определяет заголовок документа.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>&lt;meta&gt;</dt>
+              <dd>является универсальным и добавляет целый класс возможностей, в частности, с помощью метатега, как обобщённо называют этот элемент, можно изменить кодировку страницы, добавить ключевые слова, описание документа и многое другое, предназначенное для браузера или поисковых систем. В частности, чтобы браузер понимал, что имеет дело с кодировкой UTF-8 (Unicode transformation format, формат преобразования Юникод) и добавляется данная строка.</dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#4 Знакомство с тегами</h2>
+            <h3 class="box__h3">Виды тегов</h3>
+            <dl class="box__term">
+              <dt>парные</dt>
+              <dd>&lt;div&gt;&lt;/div&gt; ; &lt;span&gt;&lt;/span&gt; ; &lt;b&gt;&lt;/b&gt; ... etc</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>непарные</dt>
+              <dd>&lt;!DOCTYPE html&gt; ; &lt;link&gt; ; &lt;img&gt; ; &lt;input&gt; ; &lt;br&gt; ; &lt;hr&gt; ... etc</dd>
+            </dl>
+            <div class="box__text">
+              <p>Все теги делятся между собой по разным критериям. Самые основные - это парные и непарные теги. Название говорит само за себя. В случае  с парным тегом обязательно должен быть закрывающий тег, с таким же названием но дополнительным символом. Непарные же теги имеют закрывающий символ в конце</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container"></div>
+      </footer>
+    </div>
+    <!-- Модальные окна    -->
+    <div class="modal fade modal--auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="modal-auth" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-status modal-status--error">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-warning"></use>
+              </svg><span class="text">Произошла ошибка. Заполните форму еще раз</span>
+            </div>
+            <div class="modal-title">Авторизация</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal fieldgroup--mb-sm">
+              <label class="label">Пароль *</label>
+              <input class="input" type="text" placeholder="Введите пароль" required>
+            </div>
+            <div class="fieldgroup fieldgroup--remember">
+              <label class="checkbox-item">
+                <input type="checkbox" name="success" checked><span class="label">Запомнить меня</span>
+              </label><a href="javascript:;" data-target="#modal-forget" data-toggle="modal" data-dismiss="modal">Забыли пароль?</a>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Войти</button><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-register" data-toggle="modal" data-dismiss="modal">Зарегистрироваться</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--forget" id="modal-forget" tabindex="-1" role="dialog" aria-labelledby="modal-forget" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Восстановление пароля</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="modal-text">Введите Ваш e-mail и на него будет выслан пароль.</div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Восстановить пароль</button><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-auth" data-toggle="modal" data-dismiss="modal">Вернуться к авторизации</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--register" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Регистрация</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal has-error">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+              <div class="error-mess">это поле должно быть заполнено</div>
+            </div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Пароль *</label>
+              <input class="input" type="text" placeholder="Введите пароль" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal has-error">
+              <label class="label">Повторите пароль *</label>
+              <input class="input" type="text" placeholder="Повторите пароль" required>
+              <div class="error-mess">пароли не совпадают</div>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Зарегистрироваться</button>
+              <div class="modal-text">Нажимая на кнопку «Зарегистрироваться», я даю согласие на обработку персональных данных</div><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-auth" data-toggle="modal" data-dismiss="modal">Вернуться к авторизации</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--feedback" id="modal-feedback" tabindex="-1" role="dialog" aria-labelledby="modal-feedback" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Обратный звонок</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Ваше имя *</label>
+              <input class="input" type="text" placeholder="Введите имя" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Телефон *</label>
+              <input class="input" type="tel" placeholder="Введите телефон" required>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full" data-target="#modal-success" data-toggle="modal" data-dismiss="modal">Заказать звонок</button>
+              <!--button.btn.btn--primary.btn--full Заказать звонок-->
+              <div class="modal-text">Нажимая на кнопку «Заказать звонок», я даю согласие на обработку персональных данных</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--success" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="modal-success" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Спасибо!</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="modal-text">Мы свяжемся с вами в ближайшее время <br>График работы: пн-пт, 9:00 - 18:00</div>
+            <div class="fieldgroup"><a class="btn btn--bordered" href="javascript:;" data-dismiss="modal">Вернуться к покупкам</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/vendors.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

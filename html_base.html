@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta name="msapplication-TileColor" content="#006BAD">
+    <meta name="theme-color" content="#006BAD">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>HTML base</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
+  </head>
+  <body class="noreset">
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="index.html">Знакомство с Frontend</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="devtools.html">Devtools</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="html_base.html">HTML base</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="html_bl_in.html">Block/inline</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_base.html">CSS base</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="position.html">Position + z-index</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_selectors.html">CSS selectors</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="bem.html">БЭМ методология</a>
+              </li>
+              <li class="nav__item"><a class="nav__link active" href="flex.html">Flexboxes</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Адаптив(@media)/mobile first</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Bootstrap</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Gulp</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Pug</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SCSS</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SVG-спрайты</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Кроссбраузерность</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Fallback</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Grid</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">CSS-анимации</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SVG-анимации</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="main">
+        <div class="container">
+          <div class="box">
+            <h1 class="box__h1">HTML base</h1>
+            <h2 class="box__h2">(В примерах отображается стилизация тегов по умолчанию!)</h2>
+            <h2 class="box__h2">#1 Базовые теги</h2>
+            <dl class="box__term">
+              <dt>Форматирование текста</dt>
+              <dd style="font-style: normal;">
+                <p>
+                  Сайт рыбатекст <b>поможет</b> дизайнеру, <em>верстальщику</em>, вебмастеру сгенерировать несколько абзацев болееменее осмысленного текста рыбы на <abbr title="Cascading style Sheets">CSS</abbr> русском языке, а начинающему оратору отточить навык публичных
+                  выступлений в <sup>домашних</sup> условиях. <i>При создании</i> генератора мы <strong>использовали</strong> небезизвестный
+                  универсальный код речей. <small>Текст генерируется абзацами</small> случайным <sub>образом</sub> от двух до десяти
+                  предложений в абзаце, что позволяет <ins>сделать</ins> текст более <del>привлекательным</del> и живым для
+                  <mark>визуально-слухового</mark> восприятия.
+                </p>
+                <p>
+                  Сайт <kbd>рыбатекст поможет</kbd> дизайнеру, верстальщику, <samp>вебмастеру сгенерировать</samp> несколько абзацев болееменее осмысленного <bdo dir="rtl">текста рыбы на русском языке</bdo>, а начинающему оратору отточить навык публичных
+                  выступлений в домашних условиях.<q>При создании генератора мы использовали небезизвестный универсальный код речей.</q> При создании генератора мы использовали небезизвестный
+                  универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти
+                  предложений в абзаце, что позволяет сделать текст более привлекательным и живым для
+                  визуально-слухового восприятия.
+                </p><br>
+                <blockquote>При создании генератора мы использовали небезизвестный универсальный код речей.</blockquote>
+                <hr>
+              </dd>
+              <ul class="box__list" style="list-style: none; margin:  0 0 20px;">
+                <li>&lt;p&gt; - разбивает текст на отдельные абзацы, отделяя друг от друга пустой строкой. Браузер автоматически добавляет верхний и нижний отступ, равный 1em, при этом отступы соседних абзацев «схлопываются».</li>
+                <li>&lt;b&gt; - задаёт полужирное начертания шрифта.</li>
+                <li>&lt;strong&gt; - задаёт полужирное начертание шрифта, относится к тегам логической разметки, указывая браузеру на важность текста.</li>
+                <li>&lt;i&gt; - отображает шрифт курсивом.</li>
+                <li>&lt;em&gt; - отображает шрифт курсивом, придавая тексту значимость.</li>
+                <li>&lt;small&gt; - уменьшает размер шрифта на единицу по отношению к обычному тексту.</li>
+                <li>&lt;sub&gt; - используется для создания нижних индексов. Сдвигает текст ниже уровня строки, уменьшая его размер.</li>
+                <li>&lt;sup&gt; - используется для создания степеней. Сдвигает текст выше уровня строки, уменьшая его размер.</li>
+                <li>&lt;ins&gt; - выделяет текст в новой версии документа, подчёркивая его.</li>
+                <li>&lt;del&gt; - перечёркивает текст. Используется для выделения текста, удаленного из документа.</li>
+                <li>&lt;mark&gt; - применяется для выделения фрагментов текста в справочных целях, окрашивая блок символов желтым цветом.</li>
+                <li>&lt;code&gt; - служит для выделения фрагментов программного кода. Отображается моноширинным шрифтом.</li>
+                <li>&lt;kbd&gt; - отмечает фрагмент как вводимый пользователем с клавиатуры. Отображается моноширинным шрифтом.</li>
+                <li>&lt;samp&gt; - применяется для выделения результата, полученного в ходе выполнения программы. Отображается моноширинным шрифтом.</li>
+                <li>&lt;abbr&gt; - Применяется для форматирования аббревиатур. Браузером обычно подчеркивается пунктирной линией. Расшифровка сокращения осуществляется с помощью атрибута title, она появляется при наведении курсора мыши на текст.</li>
+                <li>&lt;bdo&gt; - используется для замещения текущего направления текста, т.е. текст в теге отображается зеркально.</li>
+                <li>&lt;blockquote&gt; - Выделяет цитаты внутри документа, выделяя его отступами и переносами строк. Для тега доступен атрибут cite.</li>
+                <li>&lt;q&gt; - используется для выделения коротких цитат. Браузерами заключается в кавычки. Для тега доступен атрибут cite.</li>
+                <li>&lt;cite&gt; - применяется для выделения цитат, названий произведений, сносок на другие документы.</li>
+                <li>&lt;dfn&gt; - позволяет выделить текст как определение. Несмотря на наличие специального тега, рекомендуется выделять текст силами CSS.</li>
+                <li>&lt;br&gt; - переносит текст на следующую строку, создавая разрыв строки.</li>
+                <li>&lt;hr&gt; - используется для разделения контента на веб-странице. Отображается в виде горизонтальной линии.</li>
+              </ul>
+            </dl>
+            <dl class="box__term">
+              <dt>Заголовки</dt>
+              <dd>&lt;h1&gt; ; &lt;h2&gt; ; &lt;h3&gt; ; &lt;h4&gt; ; &lt;h5&gt; ; &lt;h6&gt;</dd>
+              <dd>
+                <h1>Заголовок h1</h1>
+                <h2>Заголовок h2</h2>
+                <h3>Заголовок h3</h3>
+                <h4>Заголовок h4</h4>
+                <h5>Заголовок h5</h5>
+                <h6>Заголовок h6</h6>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Маркированный список</dt>
+              <dd>&lt;ul&gt;<span class="tab">&lt;li&gt;&lt;/li&gt;</span><span class="tab">&lt;li&gt;&lt;/li&gt;</span><span class="tab">&lt;li&gt;&lt;/li&gt;</span><span class="tab">&lt;li&gt;&lt;/li&gt;</span>&lt;/ul&gt;</dd>
+              <dd>
+                <ul>
+                  <li>пункт</li>
+                  <li>пункт</li>
+                  <li>пункт</li>
+                  <li>пункт</li>
+                  <li>пункт</li>
+                </ul>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Нумерованный список</dt>
+              <dd>&lt;ol&gt;<span class="tab">&lt;li&gt;&lt;/li&gt;</span><span class="tab">&lt;li&gt;&lt;/li&gt;</span><span class="tab">&lt;li&gt;&lt;/li&gt;</span>&lt;/ol&gt;</dd>
+              <dd>
+                <ol>
+                  <li>пункт</li>
+                  <li>пункт</li>
+                  <li>пункт</li>
+                  <li>пункт</li>
+                  <li>пункт</li>
+                </ol>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Таблицы</dt>
+              <dd>&lt;table&gt;<span class="tab">&lt;tr&gt;</span><span class="tab2">&lt;th&gt;&lt;/th&gt;</span><span class="tab2">&lt;th&gt;&lt;/th&gt;</span><span class="tab2">&lt;th&gt;&lt;/th&gt;</span><span class="tab">&lt;/tr&gt;</span><span class="tab">&lt;tr&gt;</span><span class="tab2">&lt;td&gt;&lt;/td&gt;</span><span class="tab2">&lt;td&gt;&lt;/td&gt;</span><span class="tab2">&lt;td&gt;&lt;/td&gt;</span><span class="tab">&lt;/tr&gt;</span>&lt;/table&gt;</dd>
+              <dd>
+                <table style="width:100%">
+                  <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                  </tr>
+                  <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                  </tr>
+                </table>
+              </dd>
+              <p><span class="alert">Расширенная инфо по таблицам -> <a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">ссылка</a></span></p>
+            </dl>
+            <dl class="box__term">
+              <dt>Изображения</dt>
+              <dd><img src="error/path" alt="Альтернативный текст если картинка не найдена" title="Заголовок картинки"></dd>
+              <dd><img src="https://www.howitworksdaily.com/wp-content/uploads/2015/06/Animals_Cats_Cat_in_the_night_031842_-1024x640.jpg" alt="image alt" title="Заголовок картинки" width="200" height="50"></dd>
+              <dd><img src="https://www.howitworksdaily.com/wp-content/uploads/2015/06/Animals_Cats_Cat_in_the_night_031842_-1024x640.jpg" alt="image alt" title="Заголовок картинки" width="500"></dd>
+              <dd><img src="./assets/imgs/cat.jpg" alt="Альтернативный текст если картинка не найдена" title="Заголовок картинки" width="500"></dd>
+              <p><span class="alert">Расширенная инфо по изображениям -> <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">ссылка</a></span></p>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container"></div>
+      </footer>
+    </div>
+    <!-- Модальные окна    -->
+    <div class="modal fade modal--auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="modal-auth" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-status modal-status--error">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-warning"></use>
+              </svg><span class="text">Произошла ошибка. Заполните форму еще раз</span>
+            </div>
+            <div class="modal-title">Авторизация</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal fieldgroup--mb-sm">
+              <label class="label">Пароль *</label>
+              <input class="input" type="text" placeholder="Введите пароль" required>
+            </div>
+            <div class="fieldgroup fieldgroup--remember">
+              <label class="checkbox-item">
+                <input type="checkbox" name="success" checked><span class="label">Запомнить меня</span>
+              </label><a href="javascript:;" data-target="#modal-forget" data-toggle="modal" data-dismiss="modal">Забыли пароль?</a>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Войти</button><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-register" data-toggle="modal" data-dismiss="modal">Зарегистрироваться</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--forget" id="modal-forget" tabindex="-1" role="dialog" aria-labelledby="modal-forget" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Восстановление пароля</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="modal-text">Введите Ваш e-mail и на него будет выслан пароль.</div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Восстановить пароль</button><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-auth" data-toggle="modal" data-dismiss="modal">Вернуться к авторизации</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--register" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Регистрация</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal has-error">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+              <div class="error-mess">это поле должно быть заполнено</div>
+            </div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Пароль *</label>
+              <input class="input" type="text" placeholder="Введите пароль" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal has-error">
+              <label class="label">Повторите пароль *</label>
+              <input class="input" type="text" placeholder="Повторите пароль" required>
+              <div class="error-mess">пароли не совпадают</div>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Зарегистрироваться</button>
+              <div class="modal-text">Нажимая на кнопку «Зарегистрироваться», я даю согласие на обработку персональных данных</div><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-auth" data-toggle="modal" data-dismiss="modal">Вернуться к авторизации</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--feedback" id="modal-feedback" tabindex="-1" role="dialog" aria-labelledby="modal-feedback" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Обратный звонок</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Ваше имя *</label>
+              <input class="input" type="text" placeholder="Введите имя" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Телефон *</label>
+              <input class="input" type="tel" placeholder="Введите телефон" required>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full" data-target="#modal-success" data-toggle="modal" data-dismiss="modal">Заказать звонок</button>
+              <!--button.btn.btn--primary.btn--full Заказать звонок-->
+              <div class="modal-text">Нажимая на кнопку «Заказать звонок», я даю согласие на обработку персональных данных</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--success" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="modal-success" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Спасибо!</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="modal-text">Мы свяжемся с вами в ближайшее время <br>График работы: пн-пт, 9:00 - 18:00</div>
+            <div class="fieldgroup"><a class="btn btn--bordered" href="javascript:;" data-dismiss="modal">Вернуться к покупкам</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/vendors.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

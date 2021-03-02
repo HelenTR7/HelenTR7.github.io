@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta name="msapplication-TileColor" content="#006BAD">
+    <meta name="theme-color" content="#006BAD">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>CSS base</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="index.html">Знакомство с Frontend</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="devtools.html">Devtools</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="html_base.html">HTML base</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="html_bl_in.html">Block/inline</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_base.html">CSS base</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="position.html">Position + z-index</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_selectors.html">CSS selectors</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="bem.html">БЭМ методология</a>
+              </li>
+              <li class="nav__item"><a class="nav__link active" href="flex.html">Flexboxes</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Адаптив(@media)/mobile first</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Bootstrap</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Gulp</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Pug</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SCSS</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SVG-спрайты</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Кроссбраузерность</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Fallback</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Grid</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">CSS-анимации</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SVG-анимации</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="main">
+        <div class="container">
+          <div class="box">
+            <h1 class="box__h1">CSS base</h1>
+            <h2 class="box__h2">#0 Изменение типа элемента, свойство display</h2>
+            <dl class="box__term">
+              <h3 class="box__h3">Значения свойства</h3>
+              <dt>inline</dt>
+              <dd>чтобы блочный элемент вел себя как inline-элемент (т. е. не переводился на новую строку).</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>block</dt>
+              <dd>
+                если необходимо отобразить строчный элемент как block-элемент (чтобы до и после элемента происходилперенос строки).</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>inline-block</dt>
+              <dd>
+                «гибрид» — блочный элемент с поведением, как у строчного. В этом случае всё содержимое таких блочных элементовбудет отображаться, как обычно, но при этом блоки будут вести себя как строчные элементы, выстраиваясь в одной
+                строке друг за другом и переносясь на новую строку лишь при необходимости. Схлопывание margin в таких случаях
+                перестает действовать.
+              </dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#1 Единицы измерения</h2>
+            <dl class="box__term">
+              <dt>px(абсолютная)</dt>
+              <dd>размер определяется разрешением экрана.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>rem(относительная)</dt>
+              <dd>% от размера шрифта указанного к тегу html, либо установленного по умолчанию</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>em(относительная)</dt>
+              <dd>% от размера шрифта родительского блока либо страницы</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>%(относительная)</dt>
+              <dd>процент от размера страницы, родительского или текущего блока. зависит от местоположения и св-в элемента к которому применяется</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>vw(относительная)</dt>
+              <dd>определяется от размера ширины окна браузера, 100vw = 100% ширины браузера. При уменьшении ширины окна, уменьшается ширина, высота, шрифт элемента. Шрифт не будет масштабирован при нажатии Ctrl+ или Ctrl-.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>vh(относительная)</dt>
+              <dd>определяется от размера высоты окна браузера, 100vh = 100% высоты браузера.  При уменьшении высоты окна, уменьшается ширина, высота, шрифт элемента. Шрифт не будет масштабирован при нажатии Ctrl+ или Ctrl-.</dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#2 Работа с box-sizing</h2>
+            <h3 class="box__h3">Значения свойства</h3>
+            <dl class="box__term">
+              <dt>content-box (значение по умолчанию в браузере)</dt>
+              <dd>
+                Основывается на стандартах CSS, при этом свойства width и heightзадают ширину и высоту контента и не включают в себя значения отступов,
+                полей и границ
+              </dd>
+              <dd>
+                <div class="test-box__bs-cb">content-box</div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>border-box (самое часто применяемое на практике)</dt>
+              <dd>
+                Свойства width и height включают в себя значения полей и границ,но не отступов (margin).</dd>
+              <dd>
+                <div class="test-box__bs-bb">border-box</div>
+              </dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#3 Работа с width/height</h2>
+            <dl class="box__term">
+              <dt>Пример работы с width/height px</dt>
+              <dd>
+                <div class="test-box__sizes">300px*50px</div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Пример работы с width/height %</dt>
+              <dd>
+                <div class="test-box__sizes2">50%*50px</div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Пример работы с width/height vw</dt>
+              <dd>
+                <div class="test-box__sizes3">50vw*50px</div>
+              </dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#4 px rem em % vw vh для текста</h2>
+            <div style="color: #b1b1b1; font-size: 20px;">
+              <p style="font-size: 16px;">Текст 12px</p>
+              <p style="font-size: 2rem;">Текст 2rem (считает от значения в html)</p>
+              <p style="font-size: 2em;">Текст 2em</p>
+              <p style="font-size: 300%;">Текст 300% (от родительского элемента)</p>
+              <p style="font-size: 5vw;">Текст 5vw</p>
+              <p style="font-size: 5vh;">Текст 5vh</p>
+            </div>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#5 Практическое применение em</h2>
+            <h3 class="box__h3">Практическое применение em</h3>
+            <div><a class="btn-test" href="javascript:;">font-size: 16px (какое значение padding у этого элемента?)</a></div>
+            <div><a class="btn-test btn-test--md" href="javascript:;">font-size: 32px; (какое значение padding у этого элемента?)</a></div>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#6 Работа с цветом</h2>
+            <dl class="box__term">
+              <dt>Пример задания цвета именем цвета</dt>
+              <dd>
+                <div class="test-box__color-name">color: red;<br> background: black;</div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Пример задания цвета по номеру</dt>
+              <dd>
+                <div class="test-box__color-hex">color: #e6e6e6;<br> background: #000;</div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Пример задания прозрачности/полупрозрачности</dt>
+              <dd>
+                <div class="test-box__color-rgba">color: rgba(255, 0, 0, 0.5);<br> background: rgb(0, 0, 0);</div>
+                <div class="test-box__color-rgba2">background: rgba(0,0,0,0.5);</div>
+                <div class="test-box__color-rgba3">background: rgba(0,0,0,0.2);</div>
+              </dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#7 Задание margin/padding/border</h2>
+            <dl class="box__term">
+              <dt>Пример margin(внешние оступы)</dt>
+              <dd>
+                <div class="test-box__margin">см инструменты разработчика margin</div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Пример padding(внутренние отступы)</dt>
+              <dd>
+                <div class="test-box__padding">см инструменты разработчика padding</div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Пример border(рамка)</dt>
+              <dd>
+                <div class="test-box__border">1px solid</div>
+                <div class="test-box__border2">5px solid</div>
+                <div class="test-box__border3">dashed</div>
+                <div class="test-box__border4">dotted</div>
+                <p><span class="alert">дополнительно все свойства рамок #1 -> <a href="http://htmlbook.ru/css/border" target="_blank">ссылка</a></span></p>
+                <p><span class="alert">дополнительно все свойства рамок #2 -> <a href="https://www.w3schools.com/css/css_border.asp" target="_blank">ссылка</a></span></p>
+              </dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#8 Margin особенности</h2>
+            <dl class="box__term">
+              <dt>Пример наложения границ соседей(см. инструменты разработчика -> styles)</dt>
+              <dd>
+                <h1 class="test-box__collapse1">Заголовок</h1>
+                <p class="test-box__collapse2">Абзац текста</p>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Пример вываливания за родительские границы(см. инструменты разработчика -> styles)</dt>
+              <dd>
+                <div class="test-box__collapse3">
+                  <p>Абзац текста</p>
+                  <p>Абзац текста</p>
+                  <p>Абзац текста</p>
+                </div>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container"></div>
+      </footer>
+    </div>
+    <!-- Модальные окна    -->
+    <div class="modal fade modal--auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="modal-auth" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-status modal-status--error">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-warning"></use>
+              </svg><span class="text">Произошла ошибка. Заполните форму еще раз</span>
+            </div>
+            <div class="modal-title">Авторизация</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal fieldgroup--mb-sm">
+              <label class="label">Пароль *</label>
+              <input class="input" type="text" placeholder="Введите пароль" required>
+            </div>
+            <div class="fieldgroup fieldgroup--remember">
+              <label class="checkbox-item">
+                <input type="checkbox" name="success" checked><span class="label">Запомнить меня</span>
+              </label><a href="javascript:;" data-target="#modal-forget" data-toggle="modal" data-dismiss="modal">Забыли пароль?</a>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Войти</button><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-register" data-toggle="modal" data-dismiss="modal">Зарегистрироваться</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--forget" id="modal-forget" tabindex="-1" role="dialog" aria-labelledby="modal-forget" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Восстановление пароля</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="modal-text">Введите Ваш e-mail и на него будет выслан пароль.</div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Восстановить пароль</button><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-auth" data-toggle="modal" data-dismiss="modal">Вернуться к авторизации</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--register" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Регистрация</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal has-error">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+              <div class="error-mess">это поле должно быть заполнено</div>
+            </div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Пароль *</label>
+              <input class="input" type="text" placeholder="Введите пароль" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal has-error">
+              <label class="label">Повторите пароль *</label>
+              <input class="input" type="text" placeholder="Повторите пароль" required>
+              <div class="error-mess">пароли не совпадают</div>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Зарегистрироваться</button>
+              <div class="modal-text">Нажимая на кнопку «Зарегистрироваться», я даю согласие на обработку персональных данных</div><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-auth" data-toggle="modal" data-dismiss="modal">Вернуться к авторизации</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--feedback" id="modal-feedback" tabindex="-1" role="dialog" aria-labelledby="modal-feedback" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Обратный звонок</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Ваше имя *</label>
+              <input class="input" type="text" placeholder="Введите имя" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Телефон *</label>
+              <input class="input" type="tel" placeholder="Введите телефон" required>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full" data-target="#modal-success" data-toggle="modal" data-dismiss="modal">Заказать звонок</button>
+              <!--button.btn.btn--primary.btn--full Заказать звонок-->
+              <div class="modal-text">Нажимая на кнопку «Заказать звонок», я даю согласие на обработку персональных данных</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--success" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="modal-success" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Спасибо!</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="modal-text">Мы свяжемся с вами в ближайшее время <br>График работы: пн-пт, 9:00 - 18:00</div>
+            <div class="fieldgroup"><a class="btn btn--bordered" href="javascript:;" data-dismiss="modal">Вернуться к покупкам</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/vendors.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

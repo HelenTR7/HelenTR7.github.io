@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta name="msapplication-TileColor" content="#006BAD">
+    <meta name="theme-color" content="#006BAD">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>БЭМ методология</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="index.html">Знакомство с Frontend</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="devtools.html">Devtools</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="html_base.html">HTML base</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="html_bl_in.html">Block/inline</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_base.html">CSS base</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="position.html">Position + z-index</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_selectors.html">CSS selectors</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="bem.html">БЭМ методология</a>
+              </li>
+              <li class="nav__item"><a class="nav__link active" href="flex.html">Flexboxes</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Адаптив(@media)/mobile first</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Bootstrap</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Gulp</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Pug</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SCSS</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SVG-спрайты</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Кроссбраузерность</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Fallback</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">Grid</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">CSS-анимации</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="">SVG-анимации</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="main">
+        <div class="container">
+          <div class="box">
+            <h1 class="box__h1">#1 БЭМ</h1>
+            <p><span class="alert"><a href="https://nicothin.pro/idiomatic-pre-CSS/" target="_blank">Ссылка на статью простым языком</a></span></p>
+            <!-- Пример разметки-->
+            <div class="product-item"><a class="product-item__top" href="#">
+                <div class="product-item__img-wrap"><img class="product-item__img" src="http://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MXwxMjA3fDB8MXxzZWFyY2h8MXx8cHJvZHVjdHx8MHx8fA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080" alt="img"></div>
+                <div class="product-item__badges">
+                  <div class="badge badge--hit">Хит</div>
+                  <div class="badge badge--new">Новинка</div>
+                </div></a>
+              <div class="product-item__bottom"><a class="product-item__title" href="#">Название товара, очеень длинное название, нужно предусмотреть чтобы не ломалась верстка!</a>
+                <div class="product-item__prices">
+                  <div class="product-item__price-current">9,30 руб</div>
+                  <div class="product-item__price-old">14,50 руб</div>
+                </div>
+                <div class="product-item__buy"><a class="btn btn--primary" href="#">Купить</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container"></div>
+      </footer>
+    </div>
+    <!-- Модальные окна    -->
+    <div class="modal fade modal--auth" id="modal-auth" tabindex="-1" role="dialog" aria-labelledby="modal-auth" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-status modal-status--error">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-warning"></use>
+              </svg><span class="text">Произошла ошибка. Заполните форму еще раз</span>
+            </div>
+            <div class="modal-title">Авторизация</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal fieldgroup--mb-sm">
+              <label class="label">Пароль *</label>
+              <input class="input" type="text" placeholder="Введите пароль" required>
+            </div>
+            <div class="fieldgroup fieldgroup--remember">
+              <label class="checkbox-item">
+                <input type="checkbox" name="success" checked><span class="label">Запомнить меня</span>
+              </label><a href="javascript:;" data-target="#modal-forget" data-toggle="modal" data-dismiss="modal">Забыли пароль?</a>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Войти</button><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-register" data-toggle="modal" data-dismiss="modal">Зарегистрироваться</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--forget" id="modal-forget" tabindex="-1" role="dialog" aria-labelledby="modal-forget" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Восстановление пароля</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="modal-text">Введите Ваш e-mail и на него будет выслан пароль.</div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Восстановить пароль</button><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-auth" data-toggle="modal" data-dismiss="modal">Вернуться к авторизации</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--register" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Регистрация</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal has-error">
+              <label class="label">E-mail *</label>
+              <input class="input" type="email" placeholder="Введите e-mail" required>
+              <div class="error-mess">это поле должно быть заполнено</div>
+            </div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Пароль *</label>
+              <input class="input" type="text" placeholder="Введите пароль" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal has-error">
+              <label class="label">Повторите пароль *</label>
+              <input class="input" type="text" placeholder="Повторите пароль" required>
+              <div class="error-mess">пароли не совпадают</div>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full">Зарегистрироваться</button>
+              <div class="modal-text">Нажимая на кнопку «Зарегистрироваться», я даю согласие на обработку персональных данных</div><a class="btn btn--bordered btn--full" href="javascript:;" data-target="#modal-auth" data-toggle="modal" data-dismiss="modal">Вернуться к авторизации</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--feedback" id="modal-feedback" tabindex="-1" role="dialog" aria-labelledby="modal-feedback" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Обратный звонок</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Ваше имя *</label>
+              <input class="input" type="text" placeholder="Введите имя" required>
+            </div>
+            <div class="fieldgroup fieldgroup--modal">
+              <label class="label">Телефон *</label>
+              <input class="input" type="tel" placeholder="Введите телефон" required>
+            </div>
+            <div class="fieldgroup">
+              <button class="btn btn--primary btn--full" data-target="#modal-success" data-toggle="modal" data-dismiss="modal">Заказать звонок</button>
+              <!--button.btn.btn--primary.btn--full Заказать звонок-->
+              <div class="modal-text">Нажимая на кнопку «Заказать звонок», я даю согласие на обработку персональных данных</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade modal--success" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="modal-success" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Спасибо!</div>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon">
+                <use xlink:href="./assets/imgs/sprite.svg#i-delete"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="modal-body" action="">
+            <div class="modal-text">Мы свяжемся с вами в ближайшее время <br>График работы: пн-пт, 9:00 - 18:00</div>
+            <div class="fieldgroup"><a class="btn btn--bordered" href="javascript:;" data-dismiss="modal">Вернуться к покупкам</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/vendors.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
