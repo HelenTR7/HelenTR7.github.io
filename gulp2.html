@@ -7,16 +7,17 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <title>HTML base</title>
+    <title>Работа с сборкой</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
   </head>
-  <body class="noreset">
+  <body>
     <div class="wrapper">
       <header class="header">
         <div class="container">
@@ -73,124 +74,27 @@
       <div class="main">
         <div class="container">
           <div class="box">
-            <h1 class="box__h1">HTML base</h1>
-            <h2 class="box__h2">(В примерах отображается стилизация тегов по умолчанию!)</h2>
-            <h2 class="box__h2">#1 Базовые теги</h2>
+            <h1 class="box__h1">Работа с сборкой</h1>
+            <h2 class="box__h2">#1 Базовая работа</h2>
             <dl class="box__term">
-              <dt>Форматирование текста</dt>
-              <dd style="font-style: normal;">
-                <p>
-                  Сайт рыбатекст <b>поможет</b> дизайнеру, <em>верстальщику</em>, вебмастеру сгенерировать несколько абзацев болееменее осмысленного текста рыбы на <abbr title="Cascading style Sheets">CSS</abbr> русском языке, а начинающему оратору отточить навык публичных
-                  выступлений в <sup>домашних</sup> условиях. <i>При создании</i> генератора мы <strong>использовали</strong> небезизвестный
-                  универсальный код речей. <small>Текст генерируется абзацами</small> случайным <sub>образом</sub> от двух до десяти
-                  предложений в абзаце, что позволяет <ins>сделать</ins> текст более <del>привлекательным</del> и живым для
-                  <mark>визуально-слухового</mark> восприятия.
-                </p>
-                <p>
-                  Сайт <kbd>рыбатекст поможет</kbd> дизайнеру, верстальщику, <samp>вебмастеру сгенерировать</samp> несколько абзацев болееменее осмысленного <bdo dir="rtl">текста рыбы на русском языке</bdo>, а начинающему оратору отточить навык публичных
-                  выступлений в домашних условиях.<q>При создании генератора мы использовали небезизвестный универсальный код речей.</q> При создании генератора мы использовали небезизвестный
-                  универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти
-                  предложений в абзаце, что позволяет сделать текст более привлекательным и живым для
-                  визуально-слухового восприятия.
-                </p><br>
-                <blockquote>При создании генератора мы использовали небезизвестный универсальный код речей.</blockquote>
-                <hr>
-              </dd>
-              <ul class="box__list" style="list-style: none; margin:  0 0 20px;">
-                <li>&lt;p&gt; - разбивает текст на отдельные абзацы, отделяя друг от друга пустой строкой. Браузер автоматически добавляет верхний и нижний отступ, равный 1em, при этом отступы соседних абзацев «схлопываются».</li>
-                <li>&lt;b&gt; - задаёт полужирное начертания шрифта.</li>
-                <li>&lt;strong&gt; - задаёт полужирное начертание шрифта, относится к тегам логической разметки, указывая браузеру на важность текста.</li>
-                <li>&lt;i&gt; - отображает шрифт курсивом.</li>
-                <li>&lt;em&gt; - отображает шрифт курсивом, придавая тексту значимость.</li>
-                <li>&lt;small&gt; - уменьшает размер шрифта на единицу по отношению к обычному тексту.</li>
-                <li>&lt;sub&gt; - используется для создания нижних индексов. Сдвигает текст ниже уровня строки, уменьшая его размер.</li>
-                <li>&lt;sup&gt; - используется для создания степеней. Сдвигает текст выше уровня строки, уменьшая его размер.</li>
-                <li>&lt;ins&gt; - выделяет текст в новой версии документа, подчёркивая его.</li>
-                <li>&lt;del&gt; - перечёркивает текст. Используется для выделения текста, удаленного из документа.</li>
-                <li>&lt;mark&gt; - применяется для выделения фрагментов текста в справочных целях, окрашивая блок символов желтым цветом.</li>
-                <li>&lt;code&gt; - служит для выделения фрагментов программного кода. Отображается моноширинным шрифтом.</li>
-                <li>&lt;kbd&gt; - отмечает фрагмент как вводимый пользователем с клавиатуры. Отображается моноширинным шрифтом.</li>
-                <li>&lt;samp&gt; - применяется для выделения результата, полученного в ходе выполнения программы. Отображается моноширинным шрифтом.</li>
-                <li>&lt;abbr&gt; - Применяется для форматирования аббревиатур. Браузером обычно подчеркивается пунктирной линией. Расшифровка сокращения осуществляется с помощью атрибута title, она появляется при наведении курсора мыши на текст.</li>
-                <li>&lt;bdo&gt; - используется для замещения текущего направления текста, т.е. текст в теге отображается зеркально.</li>
-                <li>&lt;blockquote&gt; - Выделяет цитаты внутри документа, выделяя его отступами и переносами строк. Для тега доступен атрибут cite.</li>
-                <li>&lt;q&gt; - используется для выделения коротких цитат. Браузерами заключается в кавычки. Для тега доступен атрибут cite.</li>
-                <li>&lt;cite&gt; - применяется для выделения цитат, названий произведений, сносок на другие документы.</li>
-                <li>&lt;dfn&gt; - позволяет выделить текст как определение. Несмотря на наличие специального тега, рекомендуется выделять текст силами CSS.</li>
-                <li>&lt;br&gt; - переносит текст на следующую строку, создавая разрыв строки.</li>
-                <li>&lt;hr&gt; - используется для разделения контента на веб-странице. Отображается в виде горизонтальной линии.</li>
-              </ul>
+              <dt>Файл layout.pug</dt>
+              <dd>базовая разметка страницы</dd>
+              <p><img class="box__screen" src="./assets/imgs/pr1.jpg"></p>
             </dl>
             <dl class="box__term">
-              <dt>Заголовки</dt>
-              <dd>&lt;h1&gt; ; &lt;h2&gt; ; &lt;h3&gt; ; &lt;h4&gt; ; &lt;h5&gt; ; &lt;h6&gt;</dd>
-              <dd>
-                <h1>Заголовок h1</h1>
-                <h2>Заголовок h2</h2>
-                <h3>Заголовок h3</h3>
-                <h4>Заголовок h4</h4>
-                <h5>Заголовок h5</h5>
-                <h6>Заголовок h6</h6>
-              </dd>
+              <dt>Файл index.pug</dt>
+              <dd>разметка главной страницы</dd>
+              <p><img class="box__screen" src="./assets/imgs/pr2.jpg"></p>
             </dl>
             <dl class="box__term">
-              <dt>Маркированный список</dt>
-              <dd>&lt;ul&gt;<span class="tab">&lt;li&gt;&lt;/li&gt;</span><span class="tab">&lt;li&gt;&lt;/li&gt;</span><span class="tab">&lt;li&gt;&lt;/li&gt;</span><span class="tab">&lt;li&gt;&lt;/li&gt;</span>&lt;/ul&gt;</dd>
-              <dd>
-                <ul>
-                  <li>пункт</li>
-                  <li>пункт</li>
-                  <li>пункт</li>
-                  <li>пункт</li>
-                  <li>пункт</li>
-                </ul>
-              </dd>
+              <dt>Файл app.scss</dt>
+              <dd>стили сайта</dd>
+              <p><img class="box__screen" src="./assets/imgs/pr3.jpg"></p>
             </dl>
-            <dl class="box__term">
-              <dt>Нумерованный список</dt>
-              <dd>&lt;ol&gt;<span class="tab">&lt;li&gt;&lt;/li&gt;</span><span class="tab">&lt;li&gt;&lt;/li&gt;</span><span class="tab">&lt;li&gt;&lt;/li&gt;</span>&lt;/ol&gt;</dd>
-              <dd>
-                <ol>
-                  <li>пункт</li>
-                  <li>пункт</li>
-                  <li>пункт</li>
-                  <li>пункт</li>
-                  <li>пункт</li>
-                </ol>
-              </dd>
-            </dl>
-            <dl class="box__term">
-              <dt>Таблицы</dt>
-              <dd>&lt;table&gt;<span class="tab">&lt;tr&gt;</span><span class="tab2">&lt;th&gt;&lt;/th&gt;</span><span class="tab2">&lt;th&gt;&lt;/th&gt;</span><span class="tab2">&lt;th&gt;&lt;/th&gt;</span><span class="tab">&lt;/tr&gt;</span><span class="tab">&lt;tr&gt;</span><span class="tab2">&lt;td&gt;&lt;/td&gt;</span><span class="tab2">&lt;td&gt;&lt;/td&gt;</span><span class="tab2">&lt;td&gt;&lt;/td&gt;</span><span class="tab">&lt;/tr&gt;</span>&lt;/table&gt;</dd>
-              <dd>
-                <table style="width:100%">
-                  <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Age</th>
-                  </tr>
-                  <tr>
-                    <td>Jill</td>
-                    <td>Smith</td>
-                    <td>50</td>
-                  </tr>
-                  <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
-                  </tr>
-                </table>
-              </dd>
-              <p><span class="alert">Расширенная инфо по таблицам -> <a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">ссылка</a></span></p>
-            </dl>
-            <dl class="box__term">
-              <dt>Изображения</dt>
-              <dd><img src="error/path" alt="Альтернативный текст если картинка не найдена" title="Заголовок картинки"></dd>
-              <dd><img src="https://www.howitworksdaily.com/wp-content/uploads/2015/06/Animals_Cats_Cat_in_the_night_031842_-1024x640.jpg" alt="image alt" title="Заголовок картинки" width="200" height="50"></dd>
-              <dd><img src="https://www.howitworksdaily.com/wp-content/uploads/2015/06/Animals_Cats_Cat_in_the_night_031842_-1024x640.jpg" alt="image alt" title="Заголовок картинки" width="500"></dd>
-              <dd><img src="./assets/imgs/cat.jpg" alt="Альтернативный текст если картинка не найдена" title="Заголовок картинки" width="500"></dd>
-              <p><span class="alert">Расширенная инфо по изображениям -> <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">ссылка</a></span></p>
-            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#2 Пример готового проекта</h2>
+            <p><span class="alert"><a href="https://github.com/HelenTR7/ready_project_gulp" target="_blank">https://github.com/HelenTR7/ready_project_gulp</a></span></p>
           </div>
         </div>
       </div>
