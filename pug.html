@@ -43,30 +43,30 @@
               </li>
               <li class="nav__item"><a class="nav__link" href="forms.html">Формы</a>
               </li>
-              <li class="nav__item"><a class="nav__link" href="">/ Адаптив(@media)/mobile first</a>
+              <li class="nav__item"><a class="nav__link" href="">Адаптив(@media)/mobile first</a>
               </li>
-              <li class="nav__item"><a class="nav__link" href="">/ Bootstrap</a>
-              </li>
+              <!--+e('li').__item+e('a').__link(href="") Bootstrap
+              -->
               <li class="nav__item"><a class="nav__link" href="gulp.html">Gulp</a>
               </li>
               <li class="nav__item"><a class="nav__link" href="gulp2.html">Работа с сборкой</a>
               </li>
               <li class="nav__item"><a class="nav__link" href="pug.html">Pug</a>
               </li>
-              <li class="nav__item"><a class="nav__link" href="">SCSS</a>
+              <li class="nav__item"><a class="nav__link" href="scss.html">SCSS</a>
               </li>
-              <li class="nav__item"><a class="nav__link" href="">SVG-спрайты</a>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="">Кроссбраузерность</a>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="">Fallback</a>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="">Grid</a>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="">CSS-анимации</a>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="">SVG-анимации</a>
-              </li>
+              <!--+e('li').__item+e('a').__link(href="") SVG-спрайты
+              -->
+              <!--+e('li').__item+e('a').__link(href="") Кроссбраузерность
+              -->
+              <!--+e('li').__item+e('a').__link(href="") Fallback
+              -->
+              <!--+e('li').__item+e('a').__link(href="") Grid
+              -->
+              <!--+e('li').__item+e('a').__link(href="") CSS-анимации
+              -->
+              <!--+e('li').__item+e('a').__link(href="") SVG-анимации
+              -->
             </ul>
           </nav>
         </div>
@@ -75,16 +75,56 @@
         <div class="container">
           <div class="box">
             <h1 class="box__h1">PUG</h1>
-            <h2 class="box__h2">#1 Базовые возможности</h2>
+            <h2 class="box__h2">#1 Основная информация</h2>
             <dl class="box__term">
-              <dt>Файл layout.pug</dt>
-              <dd>базовая разметка страницы</dd>
+              <dt>Препроцессор</dt>
+              <dd>это программа, которая берёт один тип данных и преобразует его в другой тип данных.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Pug</dt>
+              <dd>это шаблонизатор и html-препроцессор, написанный на javascript для node.js. Pug имеет целый ряд преимуществ по сравнению с обычным HTML.</dd>
             </dl>
           </div>
           <div class="box">
-            <h2 class="box__h2">#2 Пример базового кода
+            <h2 class="box__h2">#2 Базовый синтаксис</h2>
+            <dl class="box__term">
+              <dt>Аттрибуты и классы</dt>
+              <dd><img class="box__screen" src="./assets/imgs/pug1.jpg"></dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Создание миксина, в разметке ничего не будет т.к. мы его только создали и еще не вызвали</dt>
+              <dd><img class="box__screen" src="./assets/imgs/pug2.jpg"></dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Вызов миксина</dt>
+              <dd><img class="box__screen" src="./assets/imgs/pug3.jpg"></dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Создание и вызов миксина с параметрами несколько раз</dt>
+              <dd><img class="box__screen" src="./assets/imgs/pug4.jpg"></dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Создание и вызов миксина с параметрами несколько раз. Если параметров много можно передавать их как объект <sup>*</sup></dt>
+              <dd><img class="box__screen" src="./assets/imgs/pug5.jpg"></dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Возможность разбивать страницу на части(компоненты) и подключать их с помощью include</dt>
+              <dd><img class="box__screen" src="./assets/imgs/pug6.jpg"></dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#3 Пример базового кода
               <p><img class="box__screen" src="./assets/imgs/pug.jpg"></p>
             </h2>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#4 Расширенные возможности(дополнить)</h2>
+            <h3 class="box__h3">Наследование шаблонов (extends/ block)</h3>
+            <p><a href="https://pugjs.org/language/inheritance.html">https://pugjs.org/language/inheritance.html</a></p>
+            <h3 class="box__h3">Переменные (- var)</h3>
+            <h3 class="box__h3">Условия (if)</h3>
+            <h3 class="box__h3">Итерация (each)</h3>
+            <p><span class="alert"><a href="https://pugjs.org/api/getting-started.html" target="_blank">Ссылка на документацию</a></span></p>
           </div>
         </div>
       </div>
