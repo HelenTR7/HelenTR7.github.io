@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <title>БЭМ методология</title>
+    <title>Gulp</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -72,23 +72,102 @@
       <div class="main">
         <div class="container">
           <div class="box">
-            <h1 class="box__h1">#1 БЭМ</h1>
-            <p><span class="alert"><a href="https://nicothin.pro/idiomatic-pre-CSS/" target="_blank">Ссылка на статью простым языком</a></span></p>
-            <!-- Пример разметки-->
-            <div class="product-item"><a class="product-item__top" href="#">
-                <div class="product-item__img-wrap"><img class="product-item__img" src="http://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MXwxMjA3fDB8MXxzZWFyY2h8MXx8cHJvZHVjdHx8MHx8fA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080" alt="img"></div>
-                <div class="product-item__badges">
-                  <div class="badge badge--hit">Хит</div>
-                  <div class="badge badge--new">Новинка</div>
-                </div></a>
-              <div class="product-item__bottom"><a class="product-item__title" href="#">Название товара, очеень длинное название, нужно предусмотреть чтобы не ломалась верстка!</a>
-                <div class="product-item__prices">
-                  <div class="product-item__price-current">9,30 руб</div>
-                  <div class="product-item__price-old">14,50 руб</div>
-                </div>
-                <div class="product-item__buy"><a class="btn btn--primary" href="#">Купить</a></div>
-              </div>
-            </div>
+            <h1 class="box__h1">Gulp</h1>
+            <h2 class="box__h2">#1 Основные понятия</h2>
+            <dl class="box__term">
+              <dt>Сборщик</dt>
+              <dd>это специальная утилита которая позволяет сжимать исходный код, изображения, преобразовывать код из препроцессоров в обычный CSS/JS/HTML.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Grunt</dt>
+              <dd>менеджер задач для автоматического выполнения рутинных операций, написанный на языке программирования JavaScript. Программное обеспечение использует командную строку для запуска задач, определённых в файле Gruntfile.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Webpack</dt>
+              <dd>это пакет модулей JavaScript с открытым исходным кодом. Это пакет модулей в основном для JavaScript, но он может преобразовывать внешние ресурсы, такие как HTML, CSS и изображения, если включены соответствующие загрузчики.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Gulp</dt>
+              <dd>это таск-менеджер для автоматического выполнения часто используемых задач, написанный на языке программирования JavaScript. Программное обеспечение использует командную строку для запуска задач, определённых в файле Gulpfile. Создан как ответвление от проекта Grunt, чтоб взять из него лучшие практики.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>npm</dt>
+              <dd>менеджер пакетов, входящий в состав Node.js. Установка пакета производится при помощи команды: npm install <packagename> Все доступные для установки пакеты и их краткое описание: npm search Этой же командой можно производить выборочный поиск пакетов.</dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#2 Настройка окружения</h2>
+            <dl class="box__term">
+              <dt>Проверка установлен ли Node.js</dt>
+              <dd>вводим в терминале команду node -v</dd>
+              <p><img class="box__screen" src="./assets/imgs/node.jpg"></p>
+            </dl>
+            <dl class="box__term">
+              <dt>Если не установлен Node.js</dt>
+              <dd>скачиваем с офиц сайта и устанавливаем&nbsp;<a href="https://nodejs.org/en/" target="_blank">https://nodejs.org/en/</a></dd>
+              <dd>после этого необходимо переоткрыть терминал и снова проверить версию Node.js. Если версия появилась, Node.js установлен.</dd>
+              <dd>если вы видите ошибку npm - command not found, вам необходимо установить npm при помощи команды в терминале npm install npm@latest -g</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Установка gulp глобально</dt>
+              <dd>npm install --global gulp-cli gulp</dd>
+              <p><img class="box__screen" src="./assets/imgs/gulp.jpg"></p>
+              <dd>проверка версии gulp -v</dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#3 Создание проекта</h2>
+            <ul class="box__list">
+              <li>Создаем репозиторий на гитхабе</li>
+              <li>Клонируем себе (git clone "путь до репозитория")
+                <p><img class="box__screen" src="./assets/imgs/project1.jpg"></p>
+                <p><img class="box__screen" src="./assets/imgs/project2.jpg"></p>
+              </li>
+              <li>Заходим в папку будущего проекта
+                <p><img class="box__screen" src="./assets/imgs/project3.jpg"></p>
+              </li>
+              <li>Далее один из вариантов</li>
+            </ul>
+            <h3 class="box__h3">Вариант №1 - использование готовой сборки</h3>
+            <ul class="box__list">
+              <li>Самый простой вариант - скачиваем себе чистую готовую сборку архивом -><a href="https://github.com/HelenTR7/gulp_clear">https://github.com/HelenTR7/gulp_clear</a></li>
+              <li>Копируем файлы в папку своего проекта(с заменой README.md)
+                <p><img class="box__screen" src="./assets/imgs/project9.jpg"></p>
+              </li>
+              <li>Устанавливаем необходимые для работы сборки пакеты, команда npm install (или коротко npm i). После этого в проект будет добавлена папка node_modules
+                <p><img class="box__screen" src="./assets/imgs/project10.jpg"></p>
+              </li>
+              <li>Если команда не работает то проверьте правильность пути по которому вы вводите команду.
+                <p><img class="box__screen" src="./assets/imgs/project11.jpg"></p>
+              </li>
+              <li>Теперь можно запускать режимы настроенные в данной сборке, смотрим файл README.md
+                <p><img class="box__screen" src="./assets/imgs/project13.jpg"></p>
+              </li>
+              <li>Запускаем режим для разработки - gulp
+                <p><img class="box__screen" src="./assets/imgs/project12.jpg"></p>
+              </li>
+              <li>После запуска должна открыться вкладка в вашем браузере по умолчанию с запущенной index страницей
+                <p><img class="box__screen" src="./assets/imgs/project14.jpg"></p>
+              </li>
+              <li>Можно писать код :)</li>
+            </ul>
+            <h3 class="box__h3">Вариант №2 - создание сборки с нуля</h3>
+            <ul class="box__list">
+              <li>Запускаем команду npm init, заполняем поля либо оставляем пустым соглашаясь нажимая enter, в конце пишем yes
+                <p><img class="box__screen" src="./assets/imgs/project4.jpg"></p>
+                <p><img class="box__screen" src="./assets/imgs/project5.jpg"></p>
+              </li>
+              <li>Проверяем, что package.json создан по завершении
+                <p><img class="box__screen" src="./assets/imgs/project6.jpg"></p>
+              </li>
+              <li>Устанавливаем первый пакет в свежий проект (добавим gulp). Команда npm i gulp
+                <p><img class="box__screen" src="./assets/imgs/project7.jpg"></p>
+              </li>
+              <li>Проверяем, что пакет с его зависимостями добавлен в проект (Будет сформирована папка node_modules и файл package-lock.json)
+                <p><img class="box__screen" src="./assets/imgs/project8.jpg"></p>
+              </li>
+              <li>Дальше нужно добавить все необходимые для работы пакеты, описать</li>
+            </ul>
           </div>
         </div>
       </div>
