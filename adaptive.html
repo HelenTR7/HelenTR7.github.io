@@ -33,20 +33,34 @@
               </li>
               <li class="nav__item"><a class="nav__link" href="css_base.html">CSS base</a>
               </li>
+              <li class="nav__item"><a class="nav__link" href="css.html">CSS доп</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="gradients.html">CSS градиенты</a>
+              </li>
+              <!--где-то здесь первая тестовая работа ДЗ-->
+              <!--+e('li').__item+e('a').__link.opacity(href="") Шрифты
+              -->
+              <!--+e('li').__item
+              +e('a').__link.opacity(href="") Изображения
+              // Теги. Форматы изображений. Оптимизация изображений
+              -->
               <li class="nav__item"><a class="nav__link" href="position.html">Position + z-index</a>
               </li>
               <li class="nav__item"><a class="nav__link" href="css_selectors.html">CSS selectors</a>
               </li>
-              <li class="nav__item"><a class="nav__link" href="bem.html">БЭМ методология</a>
+              <!--+e('li').__item
+              +e('a').__link.opacity(href="") Git
+              //Система контроля версий. Публикация проекта на GitHub.
+              -->
+              <li class="nav__item"><a class="nav__link" href="flex.html">Flexboxes</a>
               </li>
-              <li class="nav__item"><a class="nav__link active" href="flex.html">Flexboxes</a>
+              <!--где-то здесь макет ДЗ №1 (html+css+flex)-->
+              <li class="nav__item"><a class="nav__link" href="bem.html">БЭМ методология</a>
               </li>
               <li class="nav__item"><a class="nav__link" href="forms.html">Формы</a>
               </li>
               <li class="nav__item"><a class="nav__link" href="adaptive.html">Адаптив(@media)/mobile first</a>
               </li>
-              <!--+e('li').__item+e('a').__link(href="") Bootstrap
-              -->
               <li class="nav__item"><a class="nav__link" href="gulp.html">Gulp</a>
               </li>
               <li class="nav__item"><a class="nav__link" href="gulp2.html">Работа с сборкой</a>
@@ -55,18 +69,24 @@
               </li>
               <li class="nav__item"><a class="nav__link" href="scss.html">SCSS</a>
               </li>
-              <!--+e('li').__item+e('a').__link(href="") SVG-спрайты
+              <!--где-то здесь макет ДЗ №2(pug+scss+flex+адаптив)-->
+              <!--+e('li').__item+e('a').__link.opacity(href="") Bootstrap
               -->
-              <!--+e('li').__item+e('a').__link(href="") Кроссбраузерность
-              -->
-              <!--+e('li').__item+e('a').__link(href="") Fallback
-              -->
-              <!--+e('li').__item+e('a').__link(href="") Grid
-              -->
-              <!--+e('li').__item+e('a').__link(href="") CSS-анимации
-              -->
-              <!--+e('li').__item+e('a').__link(href="") SVG-анимации
-              -->
+              <li class="nav__item"><a class="nav__link" href="crossbr.html">Кроссбраузерность</a>
+              </li>
+              <li class="nav__item"><a class="nav__link opacity" href="css_transition.html">CSS-transition</a>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="css_transformation.html">CSS3-трансформации</a>
+              </li>
+              <li class="nav__item"><a class="nav__link opacity" href="css_animation.html">CSS3-анимации</a>
+              </li>
+              <li class="nav__item"><a class="nav__link opacity" href="">Работа с SVG</a>
+                <!--SVG-спрайты. SVG анимации.-->
+              </li>
+              <li class="nav__item"><a class="nav__link opacity" href="">Grid</a>
+              </li>
+              <!--где-то здесь макет ДЗ №3(pug+scss+flex+адаптив+bootstrap+grid)-->
+              <!--где-то здесь ДИПЛОМ-->
             </ul>
           </nav>
         </div>
@@ -74,15 +94,46 @@
       <div class="main">
         <div class="container">
           <div class="box">
-            <h1 class="box__h1">#1 Media Queries</h1>
-            <h2 class="box__h2">Основные подходы</h2>
+            <h1 class="box__h1">Media Queries</h1>
+            <h2 class="box__h2">#1 Основные концепции</h2>
+            <ul class="box__list">
+              <li>гибкая/резиновая верстка</li>
+              <li>адаптивная верстка</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#2 Основы</h2>
             <dl class="box__term">
-              <dt>гибкая/резиновая верстка</dt>
-              <dd></dd>
+              <dt>Viewport</dt>
+              <dd>это область на экране устройства, которая видна пользователю без прокрутки экрана.</dd>
+              <dd><img class="box__screen" src="./assets/imgs/media.jpg"></dd>
             </dl>
             <dl class="box__term">
-              <dt>адаптивная верстка</dt>
-              <dd></dd>
+              <dt>Media Queries(Медиазапросы)</dt>
+              <dd>используются в тех случаях , когда нужно применить разные CSS-стили, для разных устройств по типу отображения (например: для принтера, монитора или смартфона), а также конкретных характеристик устройства  (например: ширины окна просмотра браузера), или внешней среды (например: внешнее освещение).</dd>
+              <dd>Медиа запросы позволяют адаптировать страницу для различных типов устройств, таких как: принтеры, речевых браузеров, устройств Брайля, телевизоров и так далее.</dd>
+              <dd><span class="alert"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types" target="_blank">Все виды устройств и их поддержка</a></span></dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Примеры</dt>
+              <dd><img class="box__screen" src="./assets/imgs/media1.jpg"></dd>
+              <dd><img class="box__screen" src="./assets/imgs/media2.png" width="250"></dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#3 Breakpoints</h2>
+            <dl class="box__term">
+              <dt>Breakpoints(ключевые точки)</dt>
+              <dd>при разработке вы можете использовать любые breakpoints, но лучше определиться с 4-6 основными точками и везде использовать их. Помимо этого, существуют самые популярные размеры устройств, которыми пользуются юзеры. Их можно посмотреть в интернете либо в самом браузере.</dd>
+              <dd><img class="box__screen" src="./assets/imgs/media2.jpg"></dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#4 Подходы</h2>
+            <dl class="box__term">
+              <dt>Mobile first</dt>
+              <dd>это верстка которая делается сначала для мобильных устройств, а после адаптируется под девайсы с большим разрешением.</dd>
+              <dd>Основное преимущество такого подхода - можно в разы сократить нагрузку на мобильные устройства при загрузке.</dd>
             </dl>
           </div>
         </div>
