@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <title>Блочные/строчные элементы</title>
+    <title>SVG</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -111,35 +111,65 @@
       <div class="main">
         <div class="container">
           <div class="box">
-            <h1 class="box__h1">Блочные/строчные элементы</h1>
-            <h2 class="box__h2">#1 Виды html элементов</h2>
+            <h1 class="box__h1">SVG</h1>
+            <h2 class="box__h2">#1 Основная инфо</h2>
             <dl class="box__term">
-              <dt>Блочные</dt>
-              <dd>
-                Блочные элементы являются основой, которая используется для верстки веб-страниц. Такой элемент представляетсобой прямоугольник, который по умолчанию занимает всю доступную ширину страницы (если иное значение не
-                указано в CSS), а длина элемента зависит от его содержимого. Такой элемент всегда начинается с новой строки,
-                то есть, располагается под предыдущим элементом. Блочный элемент может содержать в себе другие блочные и
-                строчные элементы.
-              </dd>
-              <dd>&lt;div&gt; ; &lt;p&gt; ; &lt;ul&gt; ; &lt;ol&gt; ; &lt;h1&gt; ... etc</dd>
+              <dt></dt>
+              <dd></dd>
             </dl>
-            <dl class="box__term">
-              <dt>Строчные</dt>
-              <dd>
-                В отличие от блочного, строчный элемент не переносится на новую строку, а располагается на той же строке,что и предыдущий элемент. Такие элементы, как правило, находятся внутри блочных элементов и их ширина зависит
-                лишь от содержимого и настроек CSS. Еще одно отличие строчного элемента от блочного заключается к том,
-                что в нем может находиться только контент и другие строчные элементы. <span class="important">Блочные элементы
-                в строчные вкладывать нельзя</span>.
-              </dd>
-              <dd>&lt;a&gt; ; &lt;span&gt; ; &lt;strong&gt; ; &lt;em&gt; ; &lt;img&gt; ... etc</dd>
-            </dl>
+            <p>SVG — это формат векторной графики.</p>
+            <p>достоинств SVG — человекопонятный код</p>
+            <p>Также SVG-элементы можно оформить с помощью CSS</p>
+            <p>SVG можно встраивать несколькими разными способами, мы рассмотрим их позже, а сейчас будем вставлять его непосредственно в код страницы.</p>
+            <p>В SVG есть несколько способов нарисовать фигуру, для простых фигур есть свои теги.</p>
+            <p>Например, прямоугольник рисуется с помощью тега rect.</p>
+            <p>Чтобы задать координаты прямоугольника, используются атрибуты x и y. Координаты определяют положение верхнего левого угла фигуры.</p>
+            <p>Скруглением углов прямоугольника управляют параметры rx и ry.</p><svg height="250" width="330">
+<rect class="leg" width="15" height="30" x="180" y="210" rx="2" fill="black" />
+<rect class="leg" width="15" height="30" x="5" y="190" rx="10" fill="black" />
+<rect class="case" width="300" height="200" x="20" y="25" rx="30" fill="dimgray" />
+<rect class="screen" width="200" height="160" x="30" rx="10" fill="deepskyblue" />
+<rect class="panel" width="80" height="110" x="200" y="50" fill="black" />
+<rect class="button" width="20" height="10" x="245" y="70" rx="2" fill="red" />
+<rect class="button" width="30" height="30" x="265" y="95" rx="4" fill="gold" />
+<rect class="button" width="40" height="20" x="225" y="120" rx="7" fill="lime" />
+</svg>
+            <p>В SVG можно рисовать не только четырёхугольники, но и многоугольники, это делается с помощью тега polygon.</p>
+            <svg><polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"/></svg>
+            <p>Окружность рисуется с помощью тега circle</p>
+            <svg><circle r="50"/></svg>
+            <p>Эллипс рисуется почти так же, как круг, но у него два радиуса: по горизонтальной оси — rx, и по вертикальной — ry.</p>
+            <svg><ellipse rx="30" ry="40%"/></svg>
+            <p>Линии рисуются с помощью тега line. Координаты начала линии задаются атрибутами x1 и y1, координаты конца — атрибутами x2 и y2.</p>
+            <svg><line x1="220" y1="10" x2="20" y2="130"/></svg>
+            <p>Так как линия не образует фигуру с внутренним контуром, для отображения ей нужно задать не заливку, а обводку. Обводкой управляют два атрибута: stroke и stroke-width. Атрибут stroke задаёт цвет обводки, stroke-width — толщину линии.</p>
+            <svg><line x1="220" y1="20" x2="20" y2="90" stroke="violet" stroke-width="5" /></svg>
+            <p>Ломаные линии рисуются с помощью тега polyline. Координаты точек на линии задаются в атрибуте points, как для polygon.</p>
+            <svg><polyline points="10,135 100,10 55,135 10,10 105,135"/></svg>
+            <p>Разница между polygon и polyline заключается в поведении обводки: у многоугольника обводка замыкается сама по себе (левая фигура), а у ломаной линии — остаётся незамкнутой (фигура справа):</p><svg width="340" style="border: 1px solid #DDD"><g transform="translate(10,10)"><polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41" fill="yellow" stroke="orange" stroke-width="5"></polygon><polyline transform="translate(170)" points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41" fill="yellow" stroke="orange" stroke-width="5"></polyline></g></svg>
           </div>
           <div class="box">
-            <h2 class="box__h2">#2 Пример</h2>
-            <div style="border: 1px solid #fff; height: 50px;">div - блочный</div>
-            <div style="border: 1px solid red; height: 50px;">div - блочный</div>
-            <div style="border: 1px solid blue; height: 50px;">div - блочный</div>
-            <div style="border: 1px solid green; height: 50px;">div - блочный</div><span style="border: 1px solid #fff; height: 50px;">span - строчный</span><span style="border: 1px solid red; height: 50px;">span - строчный</span><span style="border: 1px solid blue; height: 50px;">span - строчный</span><span style="border: 1px solid green; height: 50px;">span - строчный</span>
+            <h2 class="box__h2">#2 Основная инфо 2</h2>
+            <p>Заливки - fill</p>
+            <p>Прозрачность заливки - fill-opacity</p>
+            <p>Обводки - stroke</p>
+            <p>Толщина обводки - stroke-width</p>
+            <p>Прозрачность обводки - stroke-opacity</p>
+            <p>Концы линий - stroke-linecap</p>
+            <ul>
+              <li>1. butt — значение по умолчанию. С этим значением обводка просто заканчивается на концах линии:</li>
+              <li>2. round, с этим значением обводка равномерно закругляется вокруг концов линии:</li>
+              <li>3. square, с этим значением вокруг концов линии добавляется дополнительная обводка с прямоугольными краями:</li>
+            </ul>
+            <p>Вид сгибов - stroke-linejoin</p>
+            <ul>
+              <li>1. miter — значение по умолчанию. Обводка в месте сгиба линии никак не видоизменяется.</li>
+              <li>2. round, обводка в месте сгиба линии равномерно закругляется.</li>
+              <li>3. bevel, обводка в месте сгиба линии складывается как лента.</li>
+            </ul>
+            <p>Пунктирные линии - stroke-dasharray</p>
+            <p>Сдвиг обводки - stroke-dashoffset</p><svg style="height:130px;border:1px solid #dddddd"><g fill="none" stroke-width="15" stroke-dasharray="50"><rect width="100" height="100" x="25" y="15" stroke="yellowgreen"></rect><circle r="50" cx="225" cy="65" stroke="gold"></circle></g></svg>
+<svg style="height:130px;border:1px solid #dddddd"><g fill="none" stroke-width="15" stroke-dasharray="50" stroke-dashoffset="25"><rect width="100" height="100" x="25" y="15" stroke="yellowgreen"></rect><circle r="50" cx="225" cy="65" stroke="gold"></circle></g></svg>
           </div>
         </div>
       </div>

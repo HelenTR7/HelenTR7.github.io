@@ -17,8 +17,20 @@ var Application = {
     this.eventList.svgPolifill();
     this.eventList.mask(); //app events
     //this.eventList.sliders();
+
+    this.eventList.nav();
   },
   eventList: {
+    nav: function nav() {
+      $('.burger').on('click touch', function () {
+        $('.nav').addClass('active');
+        $('body').addClass('fixed');
+      });
+      $('.nav__close').on('click touch', function () {
+        $('.nav').removeClass('active');
+        $('body').removeClass('fixed');
+      });
+    },
     lazyImgs: function lazyImgs() {
       var callback_loaded = function callback_loaded(el) {
         var $img = $(el),
