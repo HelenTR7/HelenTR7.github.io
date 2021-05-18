@@ -1,6 +1,5 @@
-"use strict";
+'use strict'; // WINDOW WIDTH DETECT
 
-// WINDOW WIDTH DETECT
 var currentWidth = $(window).width();
 $(window).on('resize', function () {
   currentWidth = $(window).width();
@@ -22,14 +21,31 @@ var Application = {
   },
   eventList: {
     nav: function nav() {
-      $('.burger').on('click touch', function () {
+      var openBtn = $('.burger');
+      openBtn.on('click touch', function () {
+        openBtn.addClass('active');
         $('.nav').addClass('active');
         $('body').addClass('fixed');
       });
       $('.nav__close').on('click touch', function () {
+        openBtn.removeClass('active');
         $('.nav').removeClass('active');
         $('body').removeClass('fixed');
       });
+      $(document).on('click touch', function (event) {
+        var _target = $(event.target);
+
+        if (_target.hasClass('burger') || _target.closest('.nav').length) {
+          return;
+        } else {
+          openBtn.removeClass('active');
+          $('.nav').removeClass('active');
+          $('body').removeClass('fixed');
+        }
+      }); // const logo = document.querySelectorAll("#logo path");
+      // for (let i = 0; i < logo.length; i++) {
+      //     console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
+      // }
     },
     lazyImgs: function lazyImgs() {
       var callback_loaded = function callback_loaded(el) {
@@ -82,7 +98,5 @@ var Application = {
   }
 };
 $(function () {
-  'use strict';
-
   Application.init();
 });
