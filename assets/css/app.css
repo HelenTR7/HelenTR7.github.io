@@ -637,7 +637,7 @@ button {
   .box__term dt::before {
     content: '';
     position: absolute;
-    top: 6px;
+    top: calc(50% - 3px);
     left: -10px;
     height: 5px;
     width: 5px;
@@ -675,7 +675,7 @@ button {
   padding: 10px 15px;
   border: 1px dashed #d84f5d;
   border-radius: 0 15px 15px 15px;
-  margin: 0 0 10px;
+  margin: 0 20px;
   transition: all ease 0.3s; }
   .alert:hover, .alert:focus {
     color: #fff !important;
@@ -1163,7 +1163,7 @@ table td {
 .burger {
   cursor: pointer;
   width: 30px;
-  height: 20px;
+  height: 21px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1388,4 +1388,3 @@ table td {
     font-size: 14px; }
   .modal--success .btn {
     min-width: 100%; } }
-
