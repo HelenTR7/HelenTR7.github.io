@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <title>Работа с сборкой</title>
+    <title>CSS свойства</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -105,28 +105,100 @@
       <div class="main">
         <div class="container">
           <div class="box">
-            <h1 class="box__h1">Работа с сборкой</h1>
-            <h2 class="box__h2">#1 Базовая работа</h2>
-            <h3 class="box__h3">Для работы над вторым макетом</h3>
+            <h1 class="box__h1">CSS свойства</h1>
+            <h2 class="box__h2">#1 Свойство box-shadow</h2>
             <dl class="box__term">
-              <dt>Файл layout.pug</dt>
-              <dd>базовая разметка страницы(менять не нужно)</dd>
-              <dd><img class="box__screen" src="./assets/imgs/pr1.jpg"></dd>
-            </dl>
-            <dl class="box__term">
-              <dt>Файл index.pug</dt>
-              <dd>разметка главной страницы(пишем код html в синтаксисе pug здесь)</dd>
-              <dd><img class="box__screen" src="./assets/imgs/pr2.jpg"></dd>
-            </dl>
-            <dl class="box__term">
-              <dt>Файл app.scss</dt>
-              <dd>стили сайта(пишем код css в синтаксисе scss здесь)</dd>
-              <dd><img class="box__screen" src="./assets/imgs/pr3.jpg"></dd>
+              <dt>box-shadow: 5px 10px;</dt>
+              <dd>позволяет задать тень элементу,</dd>
+              <dd>
+                <div style="background:#e6e6e6; height:100px;width:250px; margin: 0 0 30px; box-shadow: 5px 10px red;"></div>
+              </dd>
+              <dd>
+                <div style="background:#e6e6e6; height:100px;width:250px; margin: 0 0 30px; box-shadow: 5px 10px 5px red;"></div>
+              </dd>
+              <dd>
+                <div style="background:#e6e6e6; height:100px;width:250px; margin: 0 0 30px; box-shadow: 5px 10px 5px 15px red;"></div>
+              </dd>
+              <dd>
+                <div style="background:#e6e6e6; height:100px;width:250px; margin: 0 0 45px; box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;"></div>
+              </dd>
+              <dd><span class="alert"><a href="https://www.w3schools.com/cssref/css3_pr_box-shadow.asp" target="_blank">Расширенно про box-shadow</a></span></dd>
             </dl>
           </div>
           <div class="box">
-            <h2 class="box__h2">#2 Пример готового проекта</h2>
-            <p><span class="alert"><a href="https://github.com/HelenTR7/ready_project_gulp" target="_blank">https://github.com/HelenTR7/ready_project_gulp</a></span></p>
+            <h2 class="box__h2">#3 Свойство background</h2>
+            <dl class="box__term">
+              <dt>background-color: color</dt>
+              <dd>определяет цвет фона элемента</dd>
+              <dd>
+                <div style="height: 100px; width: 100%; background-color: rgba(255,0,0,0.3)"></div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>background-image: url("path")</dt>
+              <dd>определяет изображение которое используется как фон элемента (покажет столько сколько влезет в элемент)</dd>
+              <dd>
+                <div style="height: 200px; width: 100%; background-image: url('./assets/imgs/cat2.jpg')"></div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>background-repeat: repeat/no-repeat/repeat-x/repeat-y/ ...</dt>
+              <dd>по умолчанию картинка повторяется по вертикали и горизонтали, можно отменить</dd>
+              <dd>
+                <div style="height: 200px; width: 100%; background-image: url('./assets/imgs/cat2.jpg'); background-repeat: no-repeat"></div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>background-position: center/top right/100% 0</dt>
+              <dd>позиционирование картинки в элементе</dd>
+              <dd>
+                <div style="height: 200px; width: 100%; background-image: url('./assets/imgs/cat2.jpg'); background-position: center;"></div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>background-size: auto/cover/contain/300px 50px</dt>
+              <dd>размер картинки в элементе</dd>
+              <dd>
+                <div style="height: 200px; width: 100%; background-image: url('./assets/imgs/cat2.jpg'); background-size: contain;"></div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>background-attachment: scroll/fixed</dt>
+              <dd>свойство определяет, должно ли фоновое изображение прокручиваться или фиксироваться (не будет прокручиваться вместе с остальной частью страницы)</dd>
+              <dd>
+                <div style="height: 200px; width: 100%; background-image: url('./assets/imgs/cat2.jpg'); background-attachment: fixed;"></div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>background(краткая запись свойства)</dt>
+              <dd>background: #ffffff url('./assets/imgs/cat2.jpg') no-repeat right top;</dd>
+              <dd>
+                <div style="height: 200px; width: 100%; background: #ffffff url('./assets/imgs/cat2.jpg') no-repeat right top;"></div>
+              </dd>
+              <dd><span class="alert"><a href="https://www.w3schools.com/cssref/css3_pr_background.asp" target="_blank">Расширенно про background</a></span></dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#3 Стилизация списков</h2>
+            <dl class="box__term"> 
+              <dd>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="helentr7" data-slug-hash="PoppMdO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Стилизация нумерованного списка"></p><span>See the Pen <a href="https://codepen.io/helentr7/pen/PoppMdO"></a>&Scy;&tcy;&icy;&lcy;&icy;&zcy;&acy;&tscy;&icy;&yacy; &ncy;&ucy;&mcy;&iecy;&rcy;&ocy;&vcy;&acy;&ncy;&ncy;&ocy;&gcy;&ocy; &scy;&pcy;&icy;&scy;&kcy;&acy;
+                   by Helen Trapeznikova (<a href="https://codepen.io/helentr7">@helentr7</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                <script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+              </dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#4 Градиентный текст</h2>
+            <dl class="box__term">
+              <dd>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="helentr7" data-slug-hash="abJWZNq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Градиентный текст"></p><span>See the Pen <a href="https://codepen.io/helentr7/pen/abJWZNq"></a>&Gcy;&rcy;&acy;&dcy;&icy;&iecy;&ncy;&tcy;&ncy;&ycy;&jcy; &tcy;&iecy;&kcy;&scy;&tcy;
+                   by Helen Trapeznikova (<a href="https://codepen.io/helentr7">@helentr7</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                <script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+              </dd>
+            </dl>
           </div>
         </div>
       </div>

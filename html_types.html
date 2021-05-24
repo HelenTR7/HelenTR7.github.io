@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <title>Работа с сборкой</title>
+    <title>Базовый HTML</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -55,27 +55,39 @@
               <ul class="nav__list">
                 <li class="nav__item"><a class="nav__link" href="index.html">Знакомство с Frontend</a>
                 </li>
-                <li class="nav__item"><a class="nav__link" href="html_base.html">Базовый HTML</a>
+                <li class="nav__item"><a class="nav__link" href="devtools.html">Devtools</a>
                 </li>
-                <li class="nav__item"><a class="nav__link" href="html_tags.html">Знакомство с тегами</a>
+                <li class="nav__item"><a class="nav__link" href="html_types.html">Знакомство с тегами</a>
                 </li>
-                <li class="nav__item"><a class="nav__link" href="css_base.html">Базовый CSS</a>
+                <li class="nav__item"><a class="nav__link" href="html_base.html">HTML base</a>
                 </li>
-                <li class="nav__item"><a class="nav__link" href="css_prop.html">Знакомство с свойствами</a>
+                <li class="nav__item"><a class="nav__link" href="css_base.html">CSS base</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="css.html">CSS доп</a>
                 </li>
                 <li class="nav__item"><a class="nav__link" href="gradients.html">CSS градиенты</a>
                 </li>
+                <!--где-то здесь первая тестовая работа ДЗ-->
                 <li class="nav__item"><a class="nav__link" href="fonts.html">Шрифты</a>
                 </li>
-                <li class="nav__item"><a class="nav__link" href="flex.html">Flexboxes    </a>
-                </li>
+                <!--+e('li').__item
+                +e('a').__link.opacity(href="") Изображения
+                // Теги. Форматы изображений. Оптимизация изображений
+                -->
                 <li class="nav__item"><a class="nav__link" href="position.html">Position + z-index</a>
                 </li>
-                <li class="nav__item"><a class="nav__link" href="css_selectors.html">CSS селекторы</a>
+                <li class="nav__item"><a class="nav__link" href="css_selectors.html">CSS selectors</a>
                 </li>
-                <li class="nav__item"><a class="nav__link" href="forms.html">Формы    </a>
+                <!--+e('li').__item
+                +e('a').__link.opacity(href="") Git
+                //Система контроля версий. Публикация проекта на GitHub.
+                -->
+                <li class="nav__item"><a class="nav__link" href="flex.html">Flexboxes</a>
                 </li>
+                <!--где-то здесь макет ДЗ №1 (html+css+flex)-->
                 <li class="nav__item"><a class="nav__link" href="bem.html">БЭМ методология</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="forms.html">Формы</a>
                 </li>
                 <li class="nav__item"><a class="nav__link" href="adaptive.html">Адаптив(@media)/mobile first</a>
                 </li>
@@ -87,6 +99,9 @@
                 </li>
                 <li class="nav__item"><a class="nav__link" href="scss.html">SCSS</a>
                 </li>
+                <!--где-то здесь макет ДЗ №2(pug+scss+flex+адаптив)-->
+                <!--+e('li').__item+e('a').__link.opacity(href="") Bootstrap
+                -->
                 <li class="nav__item"><a class="nav__link" href="crossbr.html">Кроссбраузерность</a>
                 </li>
                 <li class="nav__item"><a class="nav__link opacity" href="css_transition.html">CSS-transition</a>
@@ -95,8 +110,14 @@
                 </li>
                 <li class="nav__item"><a class="nav__link opacity" href="css_animation.html">CSS3-анимации</a>
                 </li>
+                <!--+e('li').__item
+                +e('a').__link(href="svg.html") Работа с SVG
+                //SVG-спрайты. SVG анимации.
+                -->
                 <li class="nav__item"><a class="nav__link opacity" href="">Grid</a>
                 </li>
+                <!--где-то здесь макет ДЗ №3(pug+scss+flex+адаптив+bootstrap+grid)-->
+                <!--где-то здесь ДИПЛОМ-->
               </ul>
             </nav>
           </div>
@@ -105,28 +126,84 @@
       <div class="main">
         <div class="container">
           <div class="box">
-            <h1 class="box__h1">Работа с сборкой</h1>
-            <h2 class="box__h2">#1 Базовая работа</h2>
-            <h3 class="box__h3">Для работы над вторым макетом</h3>
+            <h1 class="box__h1">Базовый HTML</h1>
+            <h2 class="box__h2">#2 Введение в HTML</h2>
             <dl class="box__term">
-              <dt>Файл layout.pug</dt>
-              <dd>базовая разметка страницы(менять не нужно)</dd>
-              <dd><img class="box__screen" src="./assets/imgs/pr1.jpg"></dd>
-            </dl>
-            <dl class="box__term">
-              <dt>Файл index.pug</dt>
-              <dd>разметка главной страницы(пишем код html в синтаксисе pug здесь)</dd>
-              <dd><img class="box__screen" src="./assets/imgs/pr2.jpg"></dd>
-            </dl>
-            <dl class="box__term">
-              <dt>Файл app.scss</dt>
-              <dd>стили сайта(пишем код css в синтаксисе scss здесь)</dd>
-              <dd><img class="box__screen" src="./assets/imgs/pr3.jpg"></dd>
+              <dt>Тег (HTML элемент)</dt>
+              <dd>это основная структурная единица веб-страницы, написанная на языке HTML.</dd>
             </dl>
           </div>
           <div class="box">
-            <h2 class="box__h2">#2 Пример готового проекта</h2>
-            <p><span class="alert"><a href="https://github.com/HelenTR7/ready_project_gulp" target="_blank">https://github.com/HelenTR7/ready_project_gulp</a></span></p>
+            <h2 class="box__h2">#3 Базовая структура HTML</h2><img class="box__screen" src="./assets/imgs/base_html.jpg" alt="html">
+            <dl class="box__term">
+              <dt>&lt;!DOCTYPE html&gt;</dt>
+              <dd>Элемент предназначен для указания типа текущего документа — DTD (document type definition, описание типа документа).  Это необходимо, чтобы браузер понимал, как следует интерпретировать текущую веб-страницу, поскольку HTML существует в нескольких версиях, кроме того, имеется XHTML (EXtensible HyperText Markup Language, расширенный язык разметки гипертекста), похожий на HTML, но различающийся с ним по синтаксису. Чтобы браузер «не путался» и понимал, согласно какому стандарту отображать веб-страницу и необходимо в первой строке кода задавать &lt;!DOCTYPE&gt;.<br> Есть несколько вариантов DOCTYPE. Самый актуальный - в примере. Он появился в HTML5 , и является актуальным до сих пор.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>&lt;html&gt;</dt>
+              <dd>Открывающий тег &lt;html&gt; определяет начало HTML-документа, внутри него хранится «голова» (&lt;head&gt;) и «тело» документа (&lt;body&gt;).</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>&lt;head&gt;</dt>
+              <dd>Содержимое этого раздела не показывается напрямую на странице, за исключением элемента &lt;title&gt;. Внутри &lt;head&gt; могут располагаться следующие элементы: &lt;base&gt;, &lt;link&gt;, &lt;meta&gt;, &lt;script&gt;, &lt;style&gt; или &lt;title&gt;.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>&lt;body&gt;</dt>
+              <dd>Внутри body находится структура документа, все теги, а также может быть подключен JS.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>&lt;title&gt;</dt>
+              <dd>Определяет заголовок документа.</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>&lt;meta&gt;</dt>
+              <dd>является универсальным и добавляет целый класс возможностей, в частности, с помощью метатега, как обобщённо называют этот элемент, можно изменить кодировку страницы, добавить ключевые слова, описание документа и многое другое, предназначенное для браузера или поисковых систем. В частности, чтобы браузер понимал, что имеет дело с кодировкой UTF-8 (Unicode transformation format, формат преобразования Юникод) и добавляется данная строка.</dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#4 Знакомство с тегами</h2>
+            <h3 class="box__h3">Виды тегов</h3>
+            <dl class="box__term">
+              <dt>парные</dt>
+              <dd>&lt;div&gt;&lt;/div&gt; ; &lt;span&gt;&lt;/span&gt; ; &lt;b&gt;&lt;/b&gt; ... etc</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>непарные</dt>
+              <dd>&lt;!DOCTYPE html&gt; ; &lt;link&gt; ; &lt;img&gt; ; &lt;input&gt; ; &lt;br&gt; ; &lt;hr&gt; ... etc</dd>
+            </dl>
+            <div class="box__text">
+              <p>Все теги делятся между собой по разным критериям. Самые основные - это парные и непарные теги. Название говорит само за себя. В случае  с парным тегом обязательно должен быть закрывающий тег, с таким же названием но дополнительным символом. Непарные же теги имеют закрывающий символ в конце</p>
+            </div>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#1 Виды html элементов</h2>
+            <dl class="box__term">
+              <dt>Блочные</dt>
+              <dd>
+                Блочные элементы являются основой, которая используется для верстки веб-страниц. Такой элемент представляетсобой прямоугольник, который по умолчанию занимает всю доступную ширину страницы (если иное значение не
+                указано в CSS), а длина элемента зависит от его содержимого. Такой элемент всегда начинается с новой строки,
+                то есть, располагается под предыдущим элементом. Блочный элемент может содержать в себе другие блочные и
+                строчные элементы.
+              </dd>
+              <dd>&lt;div&gt; ; &lt;p&gt; ; &lt;ul&gt; ; &lt;ol&gt; ; &lt;h1&gt; ... etc</dd>
+            </dl>
+            <dl class="box__term">
+              <dt>Строчные</dt>
+              <dd>
+                В отличие от блочного, строчный элемент не переносится на новую строку, а располагается на той же строке,что и предыдущий элемент. Такие элементы, как правило, находятся внутри блочных элементов и их ширина зависит
+                лишь от содержимого и настроек CSS. Еще одно отличие строчного элемента от блочного заключается к том,
+                что в нем может находиться только контент и другие строчные элементы. <span class="important">Блочные элементы
+                в строчные вкладывать нельзя</span>.
+              </dd>
+              <dd>&lt;a&gt; ; &lt;span&gt; ; &lt;strong&gt; ; &lt;em&gt; ; &lt;img&gt; ... etc</dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#2 Пример</h2>
+            <div style="border: 1px solid #fff; height: 50px;">div - блочный</div>
+            <div style="border: 1px solid red; height: 50px;">div - блочный</div>
+            <div style="border: 1px solid blue; height: 50px;">div - блочный</div>
+            <div style="border: 1px solid green; height: 50px;">div - блочный</div><span style="border: 1px solid #fff; height: 50px;">span - строчный</span><span style="border: 1px solid red; height: 50px;">span - строчный</span><span style="border: 1px solid blue; height: 50px;">span - строчный</span><span style="border: 1px solid green; height: 50px;">span - строчный</span>
           </div>
         </div>
       </div>
