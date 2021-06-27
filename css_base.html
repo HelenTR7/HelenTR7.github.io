@@ -107,17 +107,17 @@
           <div class="box">
             <h1 class="box__h1">Базовый CSS</h1>
             <h2 class="box__h2">#1 Способы подключения</h2>
-            <h3 class="box__h3">Инлайновый</h3>
+            <h3 class="box__h3">Пример подключений</h3>
             <dl class="box__term">
-              <dt>inline</dt>
-              <dd></dd>
+              <dt>inline / в теге style / в отдельном файле</dt>
+              <dd>
+                <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="MWmgrbp" data-user="helentr7" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"></p><span>See the Pen <a href="https://codepen.io/helentr7/pen/MWmgrbp">Подключение CSS</a></span>
+                <script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+              </dd>
             </dl>
           </div>
-          <div class="box">
-            <h1 class="box__h2">#2 Блочная модель       </h1>
-          </div>
           <div class="box">   
-            <h2 class="box__h2">#0 Изменение типа элемента, свойство display</h2>
+            <h2 class="box__h2">#2 Изменение типа элемента, свойство display</h2>
             <h3 class="box__h3">Значения свойства</h3>
             <dl class="box__term">
               <dt>inline</dt>
@@ -138,7 +138,40 @@
             </dl>
           </div>
           <div class="box">
-            <h2 class="box__h2">#1 Единицы измерения</h2>
+            <h2 class="box__h2">#3 Блочная модель </h2>
+            <dl class="box__term">
+              <dt>Width / height / padding / margin / border</dt>
+              <dd>
+                <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="xxdKpLz" data-user="helentr7" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"><span>See the Pen <a href="https://codepen.io/helentr7/pen/xxdKpLz" target="_blank">Блочная модель</a></span>
+                  <script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </p>
+              </dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#4 Свойство box-sizing</h2>
+            <h3 class="box__h3">Значения свойства</h3>
+            <dl class="box__term">
+              <dt>content-box (значение по умолчанию в браузере)</dt>
+              <dd>
+                Основывается на стандартах CSS, при этом свойства width и heightзадают ширину и высоту контента и не включают в себя значения отступов,
+                полей и границ
+              </dd>
+              <dd>
+                <div class="test-box__bs-cb">content-box</div>
+              </dd>
+            </dl>
+            <dl class="box__term">
+              <dt>border-box (самое часто применяемое на практике)</dt>
+              <dd>
+                Свойства width и height включают в себя значения полей и границ,но не отступов (margin).</dd>
+              <dd>
+                <div class="test-box__bs-bb">border-box</div>
+              </dd>
+            </dl>
+          </div>
+          <div class="box">
+            <h2 class="box__h2">#5 Единицы измерения</h2>
             <dl class="box__term">
               <dt>px(абсолютная)</dt>
               <dd>размер определяется разрешением экрана.</dd>
@@ -165,66 +198,6 @@
             </dl>
           </div>
           <div class="box">
-            <h2 class="box__h2">#2 Работа с box-sizing</h2>
-            <h3 class="box__h3">Значения свойства</h3>
-            <dl class="box__term">
-              <dt>content-box (значение по умолчанию в браузере)</dt>
-              <dd>
-                Основывается на стандартах CSS, при этом свойства width и heightзадают ширину и высоту контента и не включают в себя значения отступов,
-                полей и границ
-              </dd>
-              <dd>
-                <div class="test-box__bs-cb">content-box</div>
-              </dd>
-            </dl>
-            <dl class="box__term">
-              <dt>border-box (самое часто применяемое на практике)</dt>
-              <dd>
-                Свойства width и height включают в себя значения полей и границ,но не отступов (margin).</dd>
-              <dd>
-                <div class="test-box__bs-bb">border-box</div>
-              </dd>
-            </dl>
-          </div>
-          <div class="box">
-            <h2 class="box__h2">#3 Работа с width/height</h2>
-            <dl class="box__term">
-              <dt>Пример работы с width/height px</dt>
-              <dd>
-                <div class="test-box__sizes">300px*50px</div>
-              </dd>
-            </dl>
-            <dl class="box__term">
-              <dt>Пример работы с width/height %</dt>
-              <dd>
-                <div class="test-box__sizes2">50%*50px</div>
-              </dd>
-            </dl>
-            <dl class="box__term">
-              <dt>Пример работы с width/height vw</dt>
-              <dd>
-                <div class="test-box__sizes3">50vw*50px</div>
-              </dd>
-            </dl>
-          </div>
-          <div class="box">
-            <h2 class="box__h2">#4 px rem em % vw vh для текста</h2>
-            <div style="color: #b1b1b1; font-size: 20px;">
-              <p style="font-size: 16px;">Текст 12px</p>
-              <p style="font-size: 2rem;">Текст 2rem (считает от значения в html)</p>
-              <p style="font-size: 2em;">Текст 2em</p>
-              <p style="font-size: 300%;">Текст 300% (от родительского элемента)</p>
-              <p style="font-size: 5vw;">Текст 5vw</p>
-              <p style="font-size: 5vh;">Текст 5vh</p>
-            </div>
-          </div>
-          <div class="box">
-            <h2 class="box__h2">#5 Практическое применение em</h2>
-            <h3 class="box__h3">Практическое применение em</h3>
-            <div><a class="btn-test" href="javascript:;">font-size: 16px (какое значение padding у этого элемента?)</a></div>
-            <div><a class="btn-test btn-test--md" href="javascript:;">font-size: 32px; (какое значение padding у этого элемента?)</a></div>
-          </div>
-          <div class="box">
             <h2 class="box__h2">#6 Работа с цветом</h2>
             <dl class="box__term">
               <dt>Пример задания цвета именем цвета</dt>
@@ -248,33 +221,7 @@
             </dl>
           </div>
           <div class="box">
-            <h2 class="box__h2">#7 Задание margin/padding/border</h2>
-            <dl class="box__term">
-              <dt>Пример margin(внешние оступы)</dt>
-              <dd>
-                <div class="test-box__margin">см инструменты разработчика margin</div>
-              </dd>
-            </dl>
-            <dl class="box__term">
-              <dt>Пример padding(внутренние отступы)</dt>
-              <dd>
-                <div class="test-box__padding">см инструменты разработчика padding</div>
-              </dd>
-            </dl>
-            <dl class="box__term">
-              <dt>Пример border(рамка)</dt>
-              <dd>
-                <div class="test-box__border">1px solid</div>
-                <div class="test-box__border2">5px solid</div>
-                <div class="test-box__border3">dashed</div>
-                <div class="test-box__border4">dotted</div>
-                <p><span class="alert">дополнительно все свойства рамок #1 -> <a href="http://htmlbook.ru/css/border" target="_blank">ссылка</a></span></p>
-                <p><span class="alert">дополнительно все свойства рамок #2 -> <a href="https://www.w3schools.com/css/css_border.asp" target="_blank">ссылка</a></span></p>
-              </dd>
-            </dl>
-          </div>
-          <div class="box">
-            <h2 class="box__h2">#8 Margin особенности</h2>
+            <h2 class="box__h2">#7 Margin особенности</h2>
             <dl class="box__term">
               <dt>Пример наложения границ соседей(см. инструменты разработчика -> styles)</dt>
               <dd>
